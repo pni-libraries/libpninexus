@@ -121,7 +121,7 @@ or
 
 .. code-block:: bash
 
-   $ export H5CPP=/opt/pni/lib/cmake/h5cpp-0.7.0
+   $ export H5CPP=/opt/pni/lib/cmake/h5cpp-0.7.1
    $ cmake -Dh5cpp_DIR=$H5CPP -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/pni -DPNINEXUS_CONAN=DISABLE ../libpninexus
 
 if `h5cpp` is installed in the non-standard directory.
