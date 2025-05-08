@@ -1,12 +1,15 @@
 # ChangeLog
 
+## 3.3.0 - 2025-05-06
+- technical release for h5cpp 0.7.0 (https://github.com/ess-dmsc/h5cpp/issues/670)
+
 ## 3.2.0 - 2023-10-11
 - core sub-section removed from documentation ([#233](https://github.com/pni-libraries/libpniio/pull/233))
 - checks if filter is installed added ([#231](https://github.com/pni-libraries/libpniio/pull/231))
 - a filter tag added ([#229](https://github.com/pni-libraries/libpniio/pull/229))
 - xml from nxsdesigner readable by xml builder ([#227](https://github.com/pni-libraries/libpniio/pull/227))
-- string and char arumenets added to Path constructor ([#226](https://github.com/pni-libraries/libpniio/pull/226))
-- string and char arumenets added to get_object ([#224](https://github.com/pni-libraries/libpniio/pull/224))
+- string and char arguments added to Path constructor ([#226](https://github.com/pni-libraries/libpniio/pull/226))
+- string and char arguments added to get_object ([#224](https://github.com/pni-libraries/libpniio/pull/224))
 
 ## 3.1.0 - 2023-04-24
 - fs::filesystem from h5cpp used ([#212](https://github.com/pni-libraries/libpniio/pull/212))
