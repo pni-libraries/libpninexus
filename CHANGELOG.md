@@ -1,5 +1,8 @@
 # ChangeLog
 
+## 3.3.0 - 2025-05-06
+- technical release for h5cpp 0.7.0 (https://github.com/ess-dmsc/h5cpp/issues/670)
+
 ## 3.2.0 - 2023-10-11
 - core sub-section removed from documentation ([#233](https://github.com/pni-libraries/libpniio/pull/233))
 - checks if filter is installed added ([#231](https://github.com/pni-libraries/libpniio/pull/231))

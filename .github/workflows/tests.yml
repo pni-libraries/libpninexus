@@ -77,7 +77,7 @@ jobs:
       - name: Extract the code version from the branch name
         if: startsWith(github.ref, 'refs/heads/docs_') && matrix.buildtype == 'Release' && matrix.os == 'debian12'
         shell: bash
-        run: echo "##[set-output name=docver;]$(echo ${GITHUB_REF#refs/heads/docs_})"
+        run: echo "docver=$(echo ${GITHUB_REF#refs/heads/docs_})" >> $GITHUB_OUTPUT
         id: extract_docver
 
       - name: Append documentation for the extracted release version

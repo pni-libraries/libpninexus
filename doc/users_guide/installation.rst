@@ -64,7 +64,7 @@ to update your package list and
 
 .. code-block:: bash
 
-   $ apt-get install libpninexus3.2.0 libpninexus3.2.0-dev libpninexus3.2.0-doc
+   $ apt-get install libpninexus3.3.0 libpninexus3.3.0-dev libpninexus3.3.0-doc
 
 to install the library. Dependencies will be resolved automatically so you can
 start with working right after the installation has finished.
@@ -121,7 +121,7 @@ or
 
 .. code-block:: bash
 
-   $ export H5CPP=/opt/pni/lib/cmake/h5cpp-0.5.0
+   $ export H5CPP=/opt/pni/lib/cmake/h5cpp-0.7.1
    $ cmake -Dh5cpp_DIR=$H5CPP -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/pni -DPNINEXUS_CONAN=DISABLE ../libpninexus
 
 if `h5cpp` is installed in the non-standard directory.

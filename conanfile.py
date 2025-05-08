@@ -74,6 +74,6 @@ class PNINeXusConan(ConanFile):
                 if insprefix:
                     variables["CMAKE_INSTALL_PREFIX"] = insprefix
                     variables["h5cpp_DIR"] = "%s/%s" % (
-                        insprefix, "lib/cmake/h5cpp-0.6")
+                        insprefix, "lib/cmake/h5cpp-0.7.1")
                 cmake.configure(variables=variables)
                 cmake.build()
