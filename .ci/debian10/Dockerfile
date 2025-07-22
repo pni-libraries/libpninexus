@@ -1,8 +1,10 @@
 FROM debian:buster
 
-MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
+RUN sed -i 's|http://deb.debian.org|http://archive.debian.org|g' /etc/apt/sources.list
+RUN sed -i 's|http://security.debian.org|http://archive.debian.org|g' /etc/apt/sources.list
+# MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
 
-RUN /bin/bash -c 'echo "deb http://ftp.de.debian.org/debian buster main" > /etc/apt/sources.list.d/debian9de.list'
+# RUN /bin/bash -c 'echo "deb http://ftp.de.debian.org/debian buster main" > /etc/apt/sources.list.d/debian9de.list'
 RUN apt-get update
 RUN apt-get install -y base-passwd apt-utils dialog -y
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
