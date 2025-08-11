@@ -1,6 +1,6 @@
 var dir_250fb03c8dc80ab8508ddcaf8f5516b9 =
 [
-    [ "tiff/exceptions.hpp", "tiff_2exceptions_8hpp.html", "tiff_2exceptions_8hpp" ],
+    [ "exceptions.hpp", "tiff_2exceptions_8hpp.html", "tiff_2exceptions_8hpp" ],
     [ "ifd.hpp", "ifd_8hpp.html", "ifd_8hpp" ],
     [ "ifd_entry.hpp", "ifd__entry_8hpp.html", "ifd__entry_8hpp" ],
     [ "ifd_entry_reader.hpp", "ifd__entry__reader_8hpp.html", "ifd__entry__reader_8hpp" ],

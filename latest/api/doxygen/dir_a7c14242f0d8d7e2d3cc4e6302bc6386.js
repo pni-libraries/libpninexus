@@ -13,5 +13,5 @@ var dir_a7c14242f0d8d7e2d3cc4e6302bc6386 =
     [ "link.hpp", "link_8hpp.html", "link_8hpp" ],
     [ "link_builder.hpp", "link__builder_8hpp.html", "link__builder_8hpp" ],
     [ "node.hpp", "node_8hpp.html", "node_8hpp" ],
-    [ "xml/object_builder.hpp", "xml_2object__builder_8hpp.html", "xml_2object__builder_8hpp" ]
+    [ "object_builder.hpp", "xml_2object__builder_8hpp.html", "xml_2object__builder_8hpp" ]
 ];

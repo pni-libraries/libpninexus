@@ -1,12 +1,21 @@
 <map id="pni::image_reader" name="pni::image_reader">
-<area shape="rect" id="node1" title="base class for image readers" alt="" coords="77,623,217,649"/>
-<area shape="rect" id="node2" href="$classpni_1_1data__reader.html" title="base class for data readers" alt="" coords="83,547,211,573"/>
-<area shape="rect" id="node3" title=" " alt="" coords="31,450,118,477"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,339,144,380"/>
-<area shape="rect" id="node5" title=" " alt="" coords="143,443,297,484"/>
-<area shape="rect" id="node6" title=" " alt="" coords="169,346,274,373"/>
-<area shape="rect" id="node7" title=" " alt="" coords="148,248,295,289"/>
-<area shape="rect" id="node8" title=" " alt="" coords="151,157,292,199"/>
-<area shape="rect" id="node9" title=" " alt="" coords="136,81,307,108"/>
-<area shape="rect" id="node10" title=" " alt="" coords="168,5,275,32"/>
+<area shape="rect" id="Node000001" title="base class for image readers" alt="" coords="77,613,217,639"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1data__reader.html" title="base class for data readers" alt="" coords="83,539,211,564"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,578,149,613,144,613,144,578"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="31,443,118,469"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,478,140,537,136,540,90,481"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,333,144,373"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,387,77,443,72,443,72,387"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="143,436,297,476"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="199,489,177,516,158,540,154,537,173,513,194,485"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="169,341,274,366"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="224,380,223,436,218,436,218,380"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="148,244,295,284"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="224,298,224,340,219,340,219,298"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="151,155,292,195"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="224,209,224,244,219,244,219,209"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="136,80,307,105"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="224,119,224,155,219,155,219,119"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="168,5,275,31"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="224,45,224,80,219,80,219,45"/>
 </map>

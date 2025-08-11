@@ -1,22 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ASCII IO API &#8212; libpninexus (latest) documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=f6a2cb11" />
     
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=48d1d703"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -27,7 +23,7 @@
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -51,17 +47,86 @@
           <div class="body" role="main">
             
   <section id="ascii-io-api">
-<h1>ASCII IO API<a class="headerlink" href="#ascii-io-api" title="Permalink to this heading">¶</a></h1>
+<h1>ASCII IO API<a class="headerlink" href="#ascii-io-api" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ascii_parsers.html">ASCII parsers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ascii_parsers.html#parser-specializations">Parser specializations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ascii_parsers.html#_CPPv4I0EN3pni6parserE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4NK3pni6parserclERKN3pni6stringE"><code class="docutils literal notranslate"><span class="pre">parser::operator()()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ascii_parsers.html#parser-specializations">Parser specializations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4IEN3pni6parserIN3pni5valueEEE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4IEN3pni6parserIN3pni6bool_tEEE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ascii_parsers.html#_CPPv4N3pni6parserIN3pni6bool_tEE6parserEv"><code class="docutils literal notranslate"><span class="pre">parser::parser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_parsers.html#_CPPv4N3pni6parserIN3pni6bool_tEE6parserERKN3pni6stringERKN3pni6stringE"><code class="docutils literal notranslate"><span class="pre">parser::parser()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4IEN3pni6parserIN3pni5sliceEEE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4IEN3pni6parserIN3pni6stringEEE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4I0EN3pni6parserINSt6vectorI8ElementTEEEE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ascii_parsers.html#_CPPv4N3pni6parserINSt6vectorI8ElementTEEE6parserERK19container_io_config"><code class="docutils literal notranslate"><span class="pre">parser::parser()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ascii_parsers.html#_CPPv4I0EN3pni6parserINSt7complexI5BaseTEEEE"><code class="docutils literal notranslate"><span class="pre">parser</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ascii_spreadsheet.html">ASCII spreadsheet API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ascii_spreadsheet.html#pni-spreadsheet-reader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::spreadsheet_reader</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="ascii_spreadsheet.html#pni-column-info"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::column_info</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="ascii_spreadsheet.html#pni-fio-reader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::fio_reader</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ascii_spreadsheet.html#pni-spreadsheet-reader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::spreadsheet_reader</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_readerE"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_reader8iteratorE"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::iterator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_reader14const_iteratorE"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::const_iterator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_readerD0Ev"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::~spreadsheet_reader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_readeraSERK18spreadsheet_reader"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_readeraSERR18spreadsheet_reader"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni18spreadsheet_reader8ncolumnsEv"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::ncolumns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni18spreadsheet_reader8nrecordsEv"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::nrecords()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_reader5beginEv"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::begin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni18spreadsheet_reader5beginEv"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::begin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni18spreadsheet_reader3endEv"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::end()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni18spreadsheet_reader3endEv"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::end()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni18spreadsheet_reader10has_columnERKN3pni6stringE"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::has_column()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni18spreadsheet_reader12column_indexERKN3pni6stringE"><code class="docutils literal notranslate"><span class="pre">spreadsheet_reader::column_index()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ascii_spreadsheet.html#pni-column-info"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::column_info</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_infoE"><code class="docutils literal notranslate"><span class="pre">column_info</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_info11column_infoEv"><code class="docutils literal notranslate"><span class="pre">column_info::column_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_info11column_infoERK11column_info"><code class="docutils literal notranslate"><span class="pre">column_info::column_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_info11column_infoERR11column_info"><code class="docutils literal notranslate"><span class="pre">column_info::column_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_info11column_infoERKN3pni6stringEN3pni9type_id_tERKNSt6vectorI6size_tEE"><code class="docutils literal notranslate"><span class="pre">column_info::column_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_infoD0Ev"><code class="docutils literal notranslate"><span class="pre">column_info::~column_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_infoaSERK11column_info"><code class="docutils literal notranslate"><span class="pre">column_info::operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni11column_infoaSERR11column_info"><code class="docutils literal notranslate"><span class="pre">column_info::operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni11column_info5shapeEv"><code class="docutils literal notranslate"><span class="pre">column_info::shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni11column_info7type_idEv"><code class="docutils literal notranslate"><span class="pre">column_info::type_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni11column_info4nameEv"><code class="docutils literal notranslate"><span class="pre">column_info::name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ascii_spreadsheet.html#pni-fio-reader"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::fio_reader</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_readerE"><code class="docutils literal notranslate"><span class="pre">fio_reader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_reader10fio_readerEv"><code class="docutils literal notranslate"><span class="pre">fio_reader::fio_reader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_reader10fio_readerERK10fio_reader"><code class="docutils literal notranslate"><span class="pre">fio_reader::fio_reader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_reader10fio_readerERR10fio_reader"><code class="docutils literal notranslate"><span class="pre">fio_reader::fio_reader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_reader10fio_readerERKN3pni6stringE"><code class="docutils literal notranslate"><span class="pre">fio_reader::fio_reader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_readerD0Ev"><code class="docutils literal notranslate"><span class="pre">fio_reader::~fio_reader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_readeraSERK10fio_reader"><code class="docutils literal notranslate"><span class="pre">fio_reader::operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4N3pni10fio_readeraSERR10fio_reader"><code class="docutils literal notranslate"><span class="pre">fio_reader::operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni10fio_reader11nparametersEv"><code class="docutils literal notranslate"><span class="pre">fio_reader::nparameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4NK3pni10fio_reader15parameter_namesEv"><code class="docutils literal notranslate"><span class="pre">fio_reader::parameter_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4I0ENK3pni10fio_reader9parameterE8ElementTRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">fio_reader::parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4I0ENK3pni10fio_reader6columnE10ContainerTRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">fio_reader::column()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ascii_spreadsheet.html#_CPPv4I0ENK3pni10fio_reader6columnEvRKNSt6stringER10ContainerT"><code class="docutils literal notranslate"><span class="pre">fio_reader::column()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -73,7 +138,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>Previous topic</h4>
@@ -85,7 +150,7 @@
     <p class="topless"><a href="ascii_parsers.html"
                           title="next chapter">ASCII parsers</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -93,7 +158,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script><p>
   <h3 class='versions'>Versions</h3>
   <p>
@@ -120,7 +185,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -138,8 +203,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, DESY, Eugen Wintersberger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2018, DESY, Eugen Wintersberger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>

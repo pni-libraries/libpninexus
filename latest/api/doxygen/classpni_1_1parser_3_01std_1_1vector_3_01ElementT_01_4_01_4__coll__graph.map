@@ -1,5 +1,7 @@
 <map id="pni::parser&lt; std::vector&lt; ElementT &gt; &gt;" name="pni::parser&lt; std::vector&lt; ElementT &gt; &gt;">
-<area shape="rect" id="node1" title="std::vector parser" alt="" coords="81,109,256,151"/>
-<area shape="rect" id="node2" href="$classpni_1_1parser.html" title=" " alt="" coords="5,5,148,47"/>
-<area shape="rect" id="node3" href="$classpni_1_1container__io__config.html" title="container IO configuration" alt="" coords="173,13,349,39"/>
+<area shape="rect" id="Node000001" title="std::vector parser" alt="" coords="81,108,256,148"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1parser.html" title=" " alt="" coords="5,5,148,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,54,153,106,149,110,101,57"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1container__io__config.html" title="container IO configuration" alt="" coords="173,13,349,38"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,52,232,86,203,110,200,106,228,82,249,49"/>
 </map>

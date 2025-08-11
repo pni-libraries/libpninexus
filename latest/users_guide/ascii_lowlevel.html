@@ -1,22 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The low-level ASCII interface &#8212; libpninexus (latest) documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=f6a2cb11" />
     
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=48d1d703"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -27,7 +23,7 @@
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -53,14 +49,14 @@
           <div class="body" role="main">
             
   <section id="the-low-level-ascii-interface">
-<h1>The low-level ASCII interface<a class="headerlink" href="#the-low-level-ascii-interface" title="Permalink to this heading">¶</a></h1>
+<h1>The low-level ASCII interface<a class="headerlink" href="#the-low-level-ascii-interface" title="Link to this heading">¶</a></h1>
 <p>At the very bottom of the ASCII IO interface are</p>
 <ul class="simple">
 <li><p><em>parsers</em> reading ASCII data from a stream</p></li>
 <li><p>and <em>formatters</em> which can be used to write ASCII data to a stream</p></li>
 </ul>
 <section id="parsers">
-<h2>Parsers<a class="headerlink" href="#parsers" title="Permalink to this heading">¶</a></h2>
+<h2>Parsers<a class="headerlink" href="#parsers" title="Link to this heading">¶</a></h2>
 <p>The major job of this interface is to provided save number parsing. It supports
 all primitive data types provided by <em>libpninexus</em> along with instances of
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">std::vector</span></code> of such types.</p>
@@ -69,7 +65,7 @@ template. It takes one template parameter which is the primitive or container
 type to parse. To use the parser API just include <code class="file docutils literal notranslate"><span class="pre">pni/parsers.hpp</span></code> in
 your source file.</p>
 <section id="parsing-primitive-scalars">
-<h3>Parsing primitive scalars<a class="headerlink" href="#parsing-primitive-scalars" title="Permalink to this heading">¶</a></h3>
+<h3>Parsing primitive scalars<a class="headerlink" href="#parsing-primitive-scalars" title="Link to this heading">¶</a></h3>
 <p>A very simple example would be something like this</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -104,7 +100,7 @@ resulting parser matches either a</p>
 </ul>
 </section>
 <section id="parsing-a-vector-of-primitives">
-<h3>Parsing a vector of primitives<a class="headerlink" href="#parsing-a-vector-of-primitives" title="Permalink to this heading">¶</a></h3>
+<h3>Parsing a vector of primitives<a class="headerlink" href="#parsing-a-vector-of-primitives" title="Link to this heading">¶</a></h3>
 <p>Besides single scalars the <a class="reference internal" href="../api/ascii_parsers.html#_CPPv4I0EN3pni6parserE" title="pni::parser"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::parser</span></code></a> template can also be
 used with <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">std::vector</span></code> based containers where the element type
 should be one of the primitive types or a value.
@@ -171,7 +167,7 @@ delimiter symbol</p>
 </section>
 </section>
 <section id="formatters">
-<h2>Formatters<a class="headerlink" href="#formatters" title="Permalink to this heading">¶</a></h2>
+<h2>Formatters<a class="headerlink" href="#formatters" title="Link to this heading">¶</a></h2>
 <p>Formatters perform literally the inverse operation of parsers. They write
 data to a stream. Like for parsers the major concern here was to write
 numeric data without loss of precision to a stream.</p>
@@ -217,7 +213,7 @@ something like this</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../index.html">Table of Contents</a></h3>
@@ -244,7 +240,7 @@ something like this</p>
     <p class="topless"><a href="ascii_spreadsheet.html"
                           title="next chapter">Spreadsheet like ASCII files</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -252,7 +248,7 @@ something like this</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script><p>
   <h3 class='versions'>Versions</h3>
   <p>
@@ -279,7 +275,7 @@ something like this</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -299,8 +295,8 @@ something like this</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, DESY, Eugen Wintersberger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2018, DESY, Eugen Wintersberger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>

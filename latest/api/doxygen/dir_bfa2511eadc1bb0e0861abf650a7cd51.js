@@ -15,7 +15,7 @@ var dir_bfa2511eadc1bb0e0861abf650a7cd51 =
     [ "type_id_map.hpp", "type__id__map_8hpp.html", "type__id__map_8hpp" ],
     [ "type_info.hpp", "type__info_8hpp.html", null ],
     [ "type_utils.hpp", "type__utils_8hpp.html", "type__utils_8hpp" ],
-    [ "types/types.hpp", "types_2types_8hpp.html", "types_2types_8hpp" ],
+    [ "types.hpp", "types_2types_8hpp.html", "types_2types_8hpp" ],
     [ "unchecked_convertible.hpp", "unchecked__convertible_8hpp.html", "unchecked__convertible_8hpp" ],
-    [ "types/utils.hpp", "types_2utils_8hpp.html", "types_2utils_8hpp" ]
+    [ "utils.hpp", "types_2utils_8hpp.html", "types_2utils_8hpp" ]
 ];

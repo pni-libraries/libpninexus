@@ -1,8 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classpni_1_1data__reader.html" title="base class for data readers" alt="" coords="5,81,133,108"/>
-<area shape="rect" id="node2" href="$classpni_1_1image__reader.html" title="base class for image readers" alt="" coords="201,56,341,83"/>
-<area shape="rect" id="node5" href="$classpni_1_1spreadsheet__reader.html" title="base class for spreadsheet reader" alt="" coords="181,107,360,133"/>
-<area shape="rect" id="node3" href="$classpni_1_1cbf__reader.html" title="base clase for CBF readers" alt="" coords="408,5,527,32"/>
-<area shape="rect" id="node4" href="$classpni_1_1tiff__reader.html" title="TIFF file reader." alt="" coords="409,56,526,83"/>
-<area shape="rect" id="node6" href="$classpni_1_1fio__reader.html" title="FIO data reader." alt="" coords="410,107,525,133"/>
+<area shape="rect" id="Node000000" href="$classpni_1_1data__reader.html" title="base class for data readers" alt="" coords="5,80,133,105"/>
+<area shape="rect" id="Node000001" href="$classpni_1_1image__reader.html" title="base class for image readers" alt="" coords="201,55,341,80"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="146,80,200,73,201,79,147,86"/>
+<area shape="rect" id="Node000004" href="$classpni_1_1spreadsheet__reader.html" title="base class for spreadsheet reader" alt="" coords="181,104,360,129"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="147,99,181,103,181,109,147,105"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1cbf__reader.html" title="base clase for CBF readers" alt="" coords="408,5,527,31"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="334,49,415,28,417,33,336,54"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1tiff__reader.html" title="TIFF file reader." alt="" coords="409,55,526,80"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="355,65,408,65,408,70,355,70"/>
+<area shape="rect" id="Node000005" href="$classpni_1_1fio__reader.html" title="FIO data reader." alt="" coords="410,104,525,129"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="374,114,410,114,410,119,374,119"/>
 </map>

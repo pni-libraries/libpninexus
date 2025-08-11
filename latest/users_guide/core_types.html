@@ -1,22 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Data Types &#8212; libpninexus (latest) documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=f6a2cb11" />
     
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=48d1d703"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -27,7 +23,7 @@
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -51,7 +47,7 @@
           <div class="body" role="main">
             
   <section id="data-types">
-<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading">¶</a></h1>
+<h1>Data Types<a class="headerlink" href="#data-types" title="Link to this heading">¶</a></h1>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">type_class_t</span></code></p></th>
@@ -175,7 +171,7 @@ Table~ref{tab:types:basic_types} gives an overview over the primitive types
 provided by <cite>libpninexus</cite> and their corresponding <code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">type_id_t</span></code> and
 <code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">type_class_t</span></code> values.</p>
 <section id="compile-time-type-identification">
-<h2>Compile time type identification<a class="headerlink" href="#compile-time-type-identification" title="Permalink to this heading">¶</a></h2>
+<h2>Compile time type identification<a class="headerlink" href="#compile-time-type-identification" title="Link to this heading">¶</a></h2>
 <p>To obtain the ID or class of a type at compile time use the
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">type_id_map</span></code> or <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">type_class_map</span></code> type maps.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -223,7 +219,7 @@ classification</p>
 </table>
 </section>
 <section id="identifying-types-at-runtime">
-<h2>Identifying types at runtime<a class="headerlink" href="#identifying-types-at-runtime" title="Permalink to this heading">¶</a></h2>
+<h2>Identifying types at runtime<a class="headerlink" href="#identifying-types-at-runtime" title="Link to this heading">¶</a></h2>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>data type</p></th>
@@ -350,7 +346,7 @@ of this two guys is again straight forward.</p>
 </div>
 </section>
 <section id="the-binary-type">
-<span id="using-binary"></span><h2>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">binary</span></code> type<a class="headerlink" href="#the-binary-type" title="Permalink to this heading">¶</a></h2>
+<span id="using-binary"></span><h2>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">binary</span></code> type<a class="headerlink" href="#the-binary-type" title="Link to this heading">¶</a></h2>
 <p>In many cases uninterpreted binary data should be transfered from one location
 to the other (a typical example would be to copy the content of one file to
 another).
@@ -382,7 +378,7 @@ semantics. In practice there is nothing much you can do without it rather than
 store it back to another stream as it is done in line $33$.</p>
 </section>
 <section id="the-none-type">
-<span id="using-none"></span><h2>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">none</span></code> type<a class="headerlink" href="#the-none-type" title="Permalink to this heading">¶</a></h2>
+<span id="using-none"></span><h2>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">none</span></code> type<a class="headerlink" href="#the-none-type" title="Link to this heading">¶</a></h2>
 <p>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">none</span></code> type represents the absence of a type. It is a dummy type
 of very limited functionality and is mainly used internally by
 <cite>libpninexus</cite>. One major application of the <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">none</span></code> type is to do default
@@ -390,7 +386,7 @@ construction of type erasures (see <a class="reference internal" href="core_type
 For all practical purposes this type can be ignored.</p>
 </section>
 <section id="the-bool-t-type">
-<span id="using-bool"></span><h2>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">bool_t</span></code> type<a class="headerlink" href="#the-bool-t-type" title="Permalink to this heading">¶</a></h2>
+<span id="using-bool"></span><h2>The <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">bool_t</span></code> type<a class="headerlink" href="#the-bool-t-type" title="Link to this heading">¶</a></h2>
 <p>Unlike the C programming language C++ provides a native <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">bool_t</span></code> type.
 Unfortunately the C++ standardization committee made some unfortunate decisions
 with <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">bool_t</span></code> and STL containers. <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">std::vector</span></code> for instance
@@ -410,7 +406,7 @@ templates or whenever the address of a container element is required. For all
 other purposes the default C++ <code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">bool_t</span></code> type can be used.</p>
 </section>
 <section id="numeric-type-conversion">
-<h2>Numeric type conversion<a class="headerlink" href="#numeric-type-conversion" title="Permalink to this heading">¶</a></h2>
+<h2>Numeric type conversion<a class="headerlink" href="#numeric-type-conversion" title="Link to this heading">¶</a></h2>
 <p><cite>libpninexus</cite> provides facilities for save numeric type conversion. These
 functions are not only used internally by the library they are also available to
 users.  The conversion policy enforced by <cite>libpninexus</cite> is more strict than that
@@ -702,7 +698,7 @@ used.</p>
 </table>
 <p>Type matrix showing between which types  conversion is possible.</p>
 <section id="the-convert-function-template">
-<h3>The <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">convert()</span></code> function template<a class="headerlink" href="#the-convert-function-template" title="Permalink to this heading">¶</a></h3>
+<h3>The <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">convert()</span></code> function template<a class="headerlink" href="#the-convert-function-template" title="Link to this heading">¶</a></h3>
 <p>At the heart of <cite>libpninexus</cite> s type conversion system is the cpp{convert}
 function template. The declaration of the template looks somehow like this</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">SourceT</span><span class="p">,</span><span class="k">typename</span><span class="w"> </span><span class="nc">TargetT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">TargetT</span><span class="w"> </span><span class="n">convert</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SourceT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">);</span>
@@ -759,7 +755,7 @@ value of 10000 in an 8-Bit unsigned variable.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../index.html">Table of Contents</a></h3>
@@ -789,7 +785,7 @@ value of 10000 in an 8-Bit unsigned variable.</p>
     <p class="topless"><a href="core_arrays.html"
                           title="next chapter">Multidimensional arrays</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -797,7 +793,7 @@ value of 10000 in an 8-Bit unsigned variable.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script><p>
   <h3 class='versions'>Versions</h3>
   <p>
@@ -824,7 +820,7 @@ value of 10000 in an 8-Bit unsigned variable.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -842,8 +838,8 @@ value of 10000 in an 8-Bit unsigned variable.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, DESY, Eugen Wintersberger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2018, DESY, Eugen Wintersberger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>

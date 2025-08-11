@@ -1,6 +1,9 @@
 <map id="pni::nexus::xml::ObjectBuilder" name="pni::nexus::xml::ObjectBuilder">
-<area shape="rect" id="node1" title=" " alt="" coords="49,185,267,212"/>
-<area shape="rect" id="node2" href="$classpni_1_1nexus_1_1ObjectBuilder.html" title="a simple object builder interface" alt="" coords="5,96,191,123"/>
-<area shape="rect" id="node3" href="$classpni_1_1nexus_1_1xml_1_1Node.html" title="alias for ptree" alt="" coords="215,96,379,123"/>
-<area shape="rect" id="node4" title=" " alt="" coords="219,5,374,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="49,183,267,208"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1nexus_1_1ObjectBuilder.html" title="a simple object builder interface" alt="" coords="5,95,191,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,130,152,181,147,184,112,133"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1nexus_1_1xml_1_1Node.html" title="alias for ptree" alt="" coords="215,95,379,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,130,178,185,175,180,265,125"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="219,5,374,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="299,59,299,94,294,94,294,59"/>
 </map>

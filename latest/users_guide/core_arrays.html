@@ -1,22 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Multidimensional arrays &#8212; libpninexus (latest) documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=f6a2cb11" />
     
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=48d1d703"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -28,7 +24,7 @@
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -52,7 +48,7 @@
           <div class="body" role="main">
             
   <section id="multidimensional-arrays">
-<span id="arrays"></span><h1>Multidimensional arrays<a class="headerlink" href="#multidimensional-arrays" title="Permalink to this heading">¶</a></h1>
+<span id="arrays"></span><h1>Multidimensional arrays<a class="headerlink" href="#multidimensional-arrays" title="Link to this heading">¶</a></h1>
 <p>C++ has no multidimensional array type (MDA) in its standard library.
 However, MDAs are crucial for the developmemt of scientific applications.
 One of the reasons for the continuing success of languages like Fortran or Python
@@ -138,11 +134,11 @@ particular part of an array</p></td>
 along with STL algorithms.</p></li>
 </ul>
 <section id="array-construction-and-inquery">
-<h2>Array construction and inquery<a class="headerlink" href="#array-construction-and-inquery" title="Permalink to this heading">¶</a></h2>
+<h2>Array construction and inquery<a class="headerlink" href="#array-construction-and-inquery" title="Link to this heading">¶</a></h2>
 <p>Constructing arrays is rather simple by means of the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">create()</span></code> function
 provided by the array templates. As shown in <code class="file docutils literal notranslate"><span class="pre">array_create.cpp</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_create.cpp</span></code></span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_create.cpp</span></code></span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/arrays.hpp&gt;</span>
@@ -198,7 +194,7 @@ initializer lists.</p></td>
 <p>After an array has been created we may want to retrieve some of its basic
 properties. In the next example we do exactly this</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_inquery.cpp</span></code> for full code</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_inquery.cpp</span></code> for full code</span><a class="headerlink" href="#id2" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/arrays.hpp&gt;</span>
@@ -251,14 +247,14 @@ do not require construction.</p>
 </div>
 </section>
 <section id="linear-access-to-data">
-<h2>Linear access to data<a class="headerlink" href="#linear-access-to-data" title="Permalink to this heading">¶</a></h2>
+<h2>Linear access to data<a class="headerlink" href="#linear-access-to-data" title="Link to this heading">¶</a></h2>
 <p>As already mentioned in the first section of this chapter, the array types
 provided by <em>libpninexus</em> are fully STL compliant containers. They provided all
 the iterators required by the STL.
 Before we have a look on STL lets first investigate how to simply access data
 elements in an array</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_linear_access.cpp</span></code> for full code</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_linear_access.cpp</span></code> for full code</span><a class="headerlink" href="#id3" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/arrays.hpp&gt;</span>
@@ -302,7 +298,7 @@ for checked access).
 Some of the operations in this example can be done much more efficient with STL
 algorithms as demonstrated in the next example</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_stl.cpp</span></code> for full code</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_stl.cpp</span></code> for full code</span><a class="headerlink" href="#id4" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -344,7 +340,7 @@ expression . The rest of the example should be trivial (if not, please lookup a
 good C++ STL reference).</p>
 </section>
 <section id="multidimensional-access">
-<h2>Multidimensional access<a class="headerlink" href="#multidimensional-access" title="Permalink to this heading">¶</a></h2>
+<h2>Multidimensional access<a class="headerlink" href="#multidimensional-access" title="Link to this heading">¶</a></h2>
 <p>Though being an important feature, linear access to multidimensional arrays is
 not always useful. In particular the last example where we pretended to work on
 image data implementing algorithms would be rather tedious if we would have had
@@ -354,7 +350,7 @@ only linear access. It is natural for such objects to think in pixel coordinates
 array. The next example shows how to use this feature to work only on a small
 region of the image data as defined in the last example</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_multiindex.cpp</span></code> for full code</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_multiindex.cpp</span></code> for full code</span><a class="headerlink" href="#id5" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -412,14 +408,14 @@ containers only in those cases where this information is only available at
 runtime.</p>
 </section>
 <section id="array-views-and-slicing">
-<h2>Array views and slicing<a class="headerlink" href="#array-views-and-slicing" title="Permalink to this heading">¶</a></h2>
+<h2>Array views and slicing<a class="headerlink" href="#array-views-and-slicing" title="Link to this heading">¶</a></h2>
 <p>In the previous example multiindex access was used to do work on only a small
 part of the image data. <em>libpninexus</em> provides view types for arrays which would
 make these operations easier. Views are created by passing instances of
 <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">slice</span></code> to the <em>()</em> operator of an array type. Slices in <em>libpninexus</em> work
 pretty much the same as in python. Lets have a look on the following example</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_view.cpp</span></code> for full code</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_view.cpp</span></code> for full code</span><a class="headerlink" href="#id6" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -473,7 +469,7 @@ STL algorithms as shown in lines 54 and 56.</p>
 <p>View types can be copied and moved and thus can be stored in STL containers as
 shown in the next example</p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_view_container.cpp</span></code> for full code</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_view_container.cpp</span></code> for full code</span><a class="headerlink" href="#id7" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -532,7 +528,7 @@ array we can use a view and pass it to the algorithm. As views expose the same
 interface as an array the algorithm should work on views too.</p>
 </section>
 <section id="arithmetic-expressions">
-<h2>Arithmetic expressions<a class="headerlink" href="#arithmetic-expressions" title="Permalink to this heading">¶</a></h2>
+<h2>Arithmetic expressions<a class="headerlink" href="#arithmetic-expressions" title="Link to this heading">¶</a></h2>
 <p>Array and view types fully support the common arithmetic
 operators <em>+</em>, <em>*</em>, <em>/</em>, and <em>-</em> in their binary and unary
 forms. The binary versions are implemented as expression templates avoiding the
@@ -542,7 +538,7 @@ Views, arrays and scalars can be mixed within all arithmetic expressions.
 There is nothing magical with expression templates as they work entirely
 transparent to the user. Just use the arithmetic expressions as you are used to</p>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_arithmetic1.cpp</span></code></span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_arithmetic1.cpp</span></code></span><a class="headerlink" href="#id8" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -574,7 +570,7 @@ arithmetic expression.
 One can also mix arrays, selections, and scalars as the next examples
 shows</p>
 <div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_arithmetic2.cpp</span></code> for full code</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_arithmetic2.cpp</span></code> for full code</span><a class="headerlink" href="#id9" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos">29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
 <span class="linenos">30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;pni/types.hpp&gt;</span>
@@ -615,12 +611,12 @@ we are writing the corrected data back on the stack since <code class="xref cpp 
 just a view on the particular image in the stack.</p>
 </section>
 <section id="example-matrix-vector-and-matrix-matrix-multiplication">
-<h2>Example: matrix-vector and matrix-matrix multiplication<a class="headerlink" href="#example-matrix-vector-and-matrix-matrix-multiplication" title="Permalink to this heading">¶</a></h2>
+<h2>Example: matrix-vector and matrix-matrix multiplication<a class="headerlink" href="#example-matrix-vector-and-matrix-matrix-multiplication" title="Link to this heading">¶</a></h2>
 <p>In the last example matrix vector multiplications are treated. The full code can
 be viewed in <code class="file docutils literal notranslate"><span class="pre">array_arithmetic3.cpp</span></code> in the source distribution. But lets
 first start with the header</p>
 <div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_arithmetic3.cpp</span></code> for full code</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">see <code class="file docutils literal notranslate"><span class="pre">examples/core/array_arithmetic3.cpp</span></code> for full code</span><a class="headerlink" href="#id10" title="Link to this code">¶</a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 28</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="linenos"> 29</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
 <span class="linenos"> 30</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;random&gt;</span>
@@ -739,7 +735,7 @@ first start with the header</p>
 <p>Besides including all required header files matrix and vector templates are
 defined in lines 37 and 38 using the new C++11 template aliasing.</p>
 <section id="matrix-vector-multiplication">
-<h3>Matrix vector multiplication<a class="headerlink" href="#matrix-vector-multiplication" title="Permalink to this heading">¶</a></h3>
+<h3>Matrix vector multiplication<a class="headerlink" href="#matrix-vector-multiplication" title="Link to this heading">¶</a></h3>
 <p>The implementation of the matrix vector multiplication is shown in the next
 block.</p>
 <div class="math notranslate nohighlight">
@@ -766,7 +762,7 @@ block.</p>
 product of the row vector and the input vector in line 75.</p>
 </section>
 <section id="vector-matrix-multiplication">
-<h3>Vector matrix multiplication<a class="headerlink" href="#vector-matrix-multiplication" title="Permalink to this heading">¶</a></h3>
+<h3>Vector matrix multiplication<a class="headerlink" href="#vector-matrix-multiplication" title="Link to this heading">¶</a></h3>
 <p>The vector matrix multiplication</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{r} = \mathbf{v}A\mbox{ or } r_i = v_j A_{j,i}\]</div>
@@ -790,7 +786,7 @@ product of the row vector and the input vector in line 75.</p>
 line 90.</p>
 </section>
 <section id="matrix-matrix-multiplication">
-<h3>Matrix matrix multiplication<a class="headerlink" href="#matrix-matrix-multiplication" title="Permalink to this heading">¶</a></h3>
+<h3>Matrix matrix multiplication<a class="headerlink" href="#matrix-matrix-multiplication" title="Link to this heading">¶</a></h3>
 <p>Finally we need an implementation for the matrix - matrix
 multiplication</p>
 <div class="math notranslate nohighlight">
@@ -818,7 +814,7 @@ multiplication</p>
 Line 109 finally computes the inner product of the row and column vector.</p>
 </section>
 <section id="putting-it-all-together-the-main-function">
-<h3>Putting it all together: the main function<a class="headerlink" href="#putting-it-all-together-the-main-function" title="Permalink to this heading">¶</a></h3>
+<h3>Putting it all together: the main function<a class="headerlink" href="#putting-it-all-together-the-main-function" title="Link to this heading">¶</a></h3>
 <p>Finally the main program shows a simple application of these template functions.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">123</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">,</span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="p">)</span>
 <span class="linenos">124</span><span class="p">{</span>
@@ -884,7 +880,7 @@ m1.m2<span class="w"> </span><span class="o">=</span>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../index.html">Table of Contents</a></h3>
@@ -917,7 +913,7 @@ m1.m2<span class="w"> </span><span class="o">=</span>
     <p class="topless"><a href="core_type_erasures.html"
                           title="next chapter">Type erasures</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -925,7 +921,7 @@ m1.m2<span class="w"> </span><span class="o">=</span>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script><p>
   <h3 class='versions'>Versions</h3>
   <p>
@@ -952,7 +948,7 @@ m1.m2<span class="w"> </span><span class="o">=</span>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -970,8 +966,8 @@ m1.m2<span class="w"> </span><span class="o">=</span>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, DESY, Eugen Wintersberger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2018, DESY, Eugen Wintersberger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>
