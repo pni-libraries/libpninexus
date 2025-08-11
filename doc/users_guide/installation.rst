@@ -39,11 +39,11 @@ keyring
 The return value of this command line should be `OK`.
 In a next step you have to add new package sources to your system. For this
 purpose go to :file:`/etc/apt/sources.list.d` and download the sources file.
-For Debian (Bookworm) use
+For Debian (Trixie) use
 
 .. code-block:: bash
 
-   $ wget http://repos.pni-hdri.de/bookworm-pni-hdri.list
+   $ wget http://repos.pni-hdri.de/trixie-pni-hdri.list
 
 and for Ubuntu (Noble)
 
@@ -51,7 +51,7 @@ and for Ubuntu (Noble)
 
    $ wget http://repos.pni-hdri.de/noble-pni-hdri.list
 
-The packages are also available for Debian Bookworm, Bullseye, Buster and Ubuntu Oracular, Noble, Jammy.
+The packages are also available for Debian Trixie, Bookworm, Bullseye and Ubuntu Plucky, Noble, Jammy.
 
 Once you have downloaded the file use
 
