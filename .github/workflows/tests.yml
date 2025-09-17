@@ -105,7 +105,9 @@ jobs:
           MESSAGE: "Build: ({sha}) {msg}"
 
       - name: Stop the docker
-        run: docker container stop build
+        run: |
+             docker exec  --user root build  /bin/bash -c "chown -R 1001 /home/p00user/src "
+             docker container stop build
 
   conan:
     strategy:
