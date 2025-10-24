@@ -51,7 +51,7 @@ and for Ubuntu (Noble)
 
    $ wget http://repos.pni-hdri.de/noble-pni-hdri.list
 
-The packages are also available for Debian Trixie, Bookworm, Bullseye and Ubuntu Plucky, Noble, Jammy.
+The packages are also available for Debian Trixie, Bookworm, Bullseye and Ubuntu Questing, Noble, Jammy.
 
 Once you have downloaded the file use
 
