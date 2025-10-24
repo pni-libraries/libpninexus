@@ -43,7 +43,7 @@ For Debian (Trixie) use
 
 .. code-block:: bash
 
-   $ wget http://repos.pni-hdri.de/trixie-pni-hdri.list
+   $ wget http://repos.pni-hdri.de/trixie-pni-hdri.sources
 
 and for Ubuntu (Noble)
 
