@@ -1,6 +1,6 @@
 FROM debian:bullseye
 
-MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
+# MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
 
 # RUN /bin/bash -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian9de.list'
 RUN apt-get update
