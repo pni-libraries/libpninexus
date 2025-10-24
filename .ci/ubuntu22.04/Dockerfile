@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
+# MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y base-passwd apt-utils dialog -y
