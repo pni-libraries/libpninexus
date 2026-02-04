@@ -241,7 +241,7 @@ jobs:
           .\conanrunenv-release-x86_64.ps1
           cmake --build . --verbose --target check --config RELEASE
         shell: pwsh
-  macos-13:
+  macos-15:
     strategy:
       matrix:
         shared: [
@@ -252,9 +252,9 @@ jobs:
         # mpi,   # not supported yet
         serial]
         profile: [
-             apple-clang12
+             apple-clang15
         ]
-    runs-on: macos-13
+    runs-on: macos-15
     # container:
     #   image: ${{ matrix.image }}
     #   options: '--user=root'

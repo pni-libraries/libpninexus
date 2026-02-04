@@ -257,7 +257,7 @@ namespace pni{
                     >
             size_t offset(const ContainerT &index) const
             {
-                return implementation_type::template offset(_shape,index);
+                return implementation_type::template offset<>(_shape,index);
             }
 
             //-----------------------------------------------------------------
@@ -290,7 +290,7 @@ namespace pni{
                     >
             size_t offset(const array_selection &s,const ContainerT &index) const
             {
-                return implementation_type::template offset(s,_shape,index);
+                return implementation_type::template offset<>(s,_shape,index);
             }
 
             //-----------------------------------------------------------------
@@ -313,7 +313,7 @@ namespace pni{
             template<typename ContainerT> ContainerT index(size_t offset) const
             {
                 ContainerT index = container_utils<ContainerT>::create(rank()); 
-                implementation_type::template index(_shape,index,offset);
+                implementation_type::template index<>(_shape,index,offset);
                 return index;
 
             }
