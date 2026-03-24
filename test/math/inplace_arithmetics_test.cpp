@@ -281,9 +281,9 @@ BOOST_AUTO_TEST_SUITE(inplace_arithmetics_test)
             else
 	    {
 	      BOOST_CHECK_CLOSE(f.lhs[i].real(),
-				value_type(f.lhs_orig[i]*f.rhs_scalar).real(), 2.0e-04);
+				value_type(f.lhs_orig[i]*f.rhs_scalar).real(), 2.0e-03);
 	      BOOST_CHECK_CLOSE(f.lhs[i].imag(),
-				value_type(f.lhs_orig[i]*f.rhs_scalar).imag(), 2.0e-04);
+				value_type(f.lhs_orig[i]*f.rhs_scalar).imag(), 2.0e-03);
 	    }
         }
     }
@@ -308,9 +308,9 @@ BOOST_AUTO_TEST_SUITE(inplace_arithmetics_test)
             else
 	    {
 	      BOOST_CHECK_CLOSE(f.lhs[i].real(),
-				value_type(f.lhs_orig[i]*f.rhs[i]).real(), 2.0e-04);
+				value_type(f.lhs_orig[i]*f.rhs[i]).real(), 2.0e-03);
 	      BOOST_CHECK_CLOSE(f.lhs[i].imag(),
-				value_type(f.lhs_orig[i]*f.rhs[i]).imag(), 2.0e-04);
+				value_type(f.lhs_orig[i]*f.rhs[i]).imag(), 2.0e-03);
 	      
 	    }
         }

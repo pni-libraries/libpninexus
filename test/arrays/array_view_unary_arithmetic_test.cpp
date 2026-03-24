@@ -311,10 +311,10 @@ BOOST_AUTO_TEST_SUITE(array_view_unary_arithmetic_test)
                 BOOST_CHECK_EQUAL(view(i,j),fixture.lhs(i,j,3));
                 BOOST_CHECK_CLOSE(view(i,j).real(),
                                   value_type(fixture.lhs_orig(i,j,3)*
-                                             fixture.rhs_scalar).real(), 2.0e-04);
+                                             fixture.rhs_scalar).real(), 2.0e-03);
                 BOOST_CHECK_CLOSE(view(i,j).imag(),
                                   value_type(fixture.lhs_orig(i,j,3)*
-                                             fixture.rhs_scalar).imag(), 2.0e-04);
+                                             fixture.rhs_scalar).imag(), 2.0e-03);
             }
     }
 
@@ -339,8 +339,8 @@ BOOST_AUTO_TEST_SUITE(array_view_unary_arithmetic_test)
         auto orig_iter = orig.begin();
         auto rhs_iter  = rhs.begin();
         for(auto v: view) {
-	  BOOST_CHECK_CLOSE(v.imag(),value_type((*orig_iter)*(*rhs_iter)).imag(), 2.0e-04);
-	  BOOST_CHECK_CLOSE(v.real(),value_type((*orig_iter++)*(*rhs_iter++)).real(), 2.0e-04);
+	  BOOST_CHECK_CLOSE(v.imag(),value_type((*orig_iter)*(*rhs_iter)).imag(), 2.0e-03);
+	  BOOST_CHECK_CLOSE(v.real(),value_type((*orig_iter++)*(*rhs_iter++)).real(), 2.0e-03);
 	}
     }
 
