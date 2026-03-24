@@ -37,6 +37,7 @@ option(PNINEXUS_LOCAL_MODULES "Build pninexus using cmake local modules first")
 option(PNINEXUS_BUILD_EXAMPLES "Include the examples in the project" OFF)
 option(PNINEXUS_BUILD_DOC "build document" ON)
 option(PNINEXUS_USE_BOOST_FILESYSTEM "use boost filesystem library" OFF)
+option(PNINEXUS_TEST_LOG_IN_FILE "store test logs in files" OFF)
 
 
 set(PNINEXUS_CONAN "AUTO" CACHE STRING "conan options AUTO (conan must be in path), MANUAL (expects conanbuildinfo.cmake in build directory) or DISABLE")

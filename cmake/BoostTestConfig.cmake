@@ -22,6 +22,7 @@ macro (add_boost_logging_test test_name test_target working_dir)
 
     #we need to create separate options configurations depending on the Boost
     #version installed
+    if(PNINEXUS_TEST_LOG_IN_FILE EQUAL ON)
     if(Boost_VERSION EQUAL 106200)
         message(STATUS "Setting up test for Boost Unit test version 1.62")
         message(STATUS " .. Due to a bug in 1.62 there will be no reporting but only logs")
@@ -42,6 +43,7 @@ macro (add_boost_logging_test test_name test_target working_dir)
             list(APPEND LOG_OPTIONS "--log_format=XML")
             list(APPEND LOG_OPTIONS "--report_format=XML")
         endif()
+    endif()
     endif()
 
     add_test(NAME "${test_name}"
