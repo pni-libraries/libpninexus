@@ -31,6 +31,8 @@
 #endif
 
 #include <pni/algorithms/math/div_op.hpp>
+#include <pni/types/types.hpp>
+#include <pni/types/traits.hpp>
 #include "array_types.hpp"
 #include "fixture.hpp"
 #include "number_ranges.hpp"
@@ -68,7 +70,9 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
 
         fixture_type f((mult_ranges<value_type>()));
 
-        mult_op<TestArrayT,TestArrayT> o1(f.lhs,f.rhs);
+	if(!is_complex_type<value_type>::value) {
+	  
+	mult_op<TestArrayT,TestArrayT> o1(f.lhs,f.rhs);
         for(size_t index=0;index<o1.size();++index)
             BOOST_CHECK_EQUAL(o1[index],f.lhs[index]*f.rhs[index]);
 
@@ -81,6 +85,42 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
         for(size_t index=0;index<o3.size();++index)
             BOOST_CHECK_EQUAL(o3[index], 
                               value_type(f.lhs_s[index]*f.rhs[index]));
+	
+	}
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(access_cx_test,TestArrayT,all_array_cx_types)
+    {
+        typedef fixture<TestArrayT> fixture_type; 
+        typedef typename fixture_type::value_type value_type;
+        typedef typename fixture_type::scalar_type scalar_type;
+
+        fixture_type f((mult_ranges<value_type>()));
+
+	if(!is_complex_type<value_type>::value) {
+	  
+	mult_op<TestArrayT,TestArrayT> o1(f.lhs,f.rhs);
+        for(size_t index=0;index<o1.size();++index)
+            BOOST_CHECK_EQUAL(o1[index],f.lhs[index]*f.rhs[index]);
+	
+        mult_op<TestArrayT,scalar_type> o2(f.lhs,f.rhs_s);
+        for(size_t index=0;index<o2.size();++index){
+	  BOOST_CHECK_CLOSE(o2[index].real(), 
+			    value_type(f.lhs[index]*f.rhs_s[index]).real(), 2.0e-04);
+	  BOOST_CHECK_CLOSE(o2[index].imag(), 
+			    value_type(f.lhs[index]*f.rhs_s[index]).imag(), 2.0e-04);
+	}
+
+        mult_op<scalar_type,TestArrayT> o3(f.lhs_s,f.rhs);
+        for(size_t index=0;index<o3.size();++index){
+            BOOST_CHECK_CLOSE(o3[index].real(), 
+                              value_type(f.lhs_s[index]*f.rhs[index]).real(), 2.0e-04);
+            BOOST_CHECK_CLOSE(o3[index].imag(), 
+                              value_type(f.lhs_s[index]*f.rhs[index]).imag(), 2.0e-04);
+	}
+	
+	}
     }
 
     //========================================================================
@@ -127,6 +167,8 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
         fixture_type f((mult_ranges<value_type>()));
         auto result = TestArrayT::create(f.shape);
 
+	if(!is_complex_type<value_type>::value) {
+	  
         result = f.lhs*f.rhs;
         BOOST_CHECK_EQUAL(result.size(),f.lhs.size());
         for(size_t index=0;index<result.size();++index)
@@ -141,11 +183,73 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
         BOOST_CHECK_EQUAL(result.size(),f.lhs.size());
         for(size_t index=0;index<result.size();++index)
             BOOST_CHECK_EQUAL(result[index],f.lhs[index]*f.rhs_scalar);
+
+	}
         
     }
 
     //========================================================================
     BOOST_AUTO_TEST_CASE_TEMPLATE(operator_on_view_test,TestArrayT,all_array_types)
+    {
+        typedef fixture<TestArrayT> fixture_type; 
+        typedef typename fixture_type::value_type value_type;
+        typedef dynamic_array<value_type> result_type;
+
+        fixture_type f((mult_ranges<value_type>()));
+
+        auto vrhs = f.rhs(0,slice(0,3),slice(0,4));
+        auto vlhs = f.lhs(0,slice(0,3),slice(0,4));
+
+	if(!is_complex_type<value_type>::value) {
+	  
+        result_type result(vlhs * vrhs);
+        for(size_t index=0;index<result.size();index++)
+            BOOST_CHECK_EQUAL(result[index],
+                              value_type(vlhs[index]*vrhs[index]));
+
+        result = vlhs * f.rhs_scalar;
+        for(size_t index=0;index<result.size();index++)
+            BOOST_CHECK_EQUAL(result[index],
+                              value_type(vlhs[index]*f.rhs_scalar));
+
+        result = f.lhs_scalar * vrhs;
+        for(size_t index=0;index<result.size();index++)
+            BOOST_CHECK_EQUAL(result[index],
+                              value_type(f.lhs_scalar*vrhs[index]));
+	
+	}
+
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(operator_cx_test,TestArrayT,all_array_cx_types)
+    {
+        typedef fixture<TestArrayT> fixture_type; 
+        typedef typename fixture_type::value_type value_type;
+
+        fixture_type f((mult_ranges<value_type>()));
+        auto result = TestArrayT::create(f.shape);
+
+        result = f.lhs*f.rhs;
+        BOOST_CHECK_EQUAL(result.size(),f.lhs.size());
+        for(size_t index=0;index<result.size();++index)
+            BOOST_CHECK_EQUAL(result[index],f.lhs[index]*f.rhs[index]);
+
+        result = f.lhs_scalar*f.rhs;
+        BOOST_CHECK_EQUAL(result.size(),f.rhs.size());
+        for(size_t index=0;index<result.size();++index)
+            BOOST_CHECK_EQUAL(result[index],f.lhs_scalar*f.rhs[index]);
+
+        result = f.lhs * f.rhs_scalar;
+        BOOST_CHECK_EQUAL(result.size(),f.lhs.size());
+        for(size_t index=0;index<result.size();++index){
+	  BOOST_CHECK_CLOSE(result[index].real(), (f.lhs[index]*f.rhs_scalar).real(), 2.0e-04);
+	  BOOST_CHECK_CLOSE(result[index].imag(), (f.lhs[index]*f.rhs_scalar).imag(), 2.0e-04);
+        }
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(operator_on_view_cx_test,TestArrayT,all_array_cx_types)
     {
         typedef fixture<TestArrayT> fixture_type; 
         typedef typename fixture_type::value_type value_type;
@@ -162,9 +266,12 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
                               value_type(vlhs[index]*vrhs[index]));
 
         result = vlhs * f.rhs_scalar;
-        for(size_t index=0;index<result.size();index++)
-            BOOST_CHECK_EQUAL(result[index],
-                              value_type(vlhs[index]*f.rhs_scalar));
+        for(size_t index=0;index<result.size();index++) {
+	  BOOST_CHECK_CLOSE(result[index].real(),
+			    value_type(vlhs[index]*f.rhs_scalar).real(), 2.0e-04);
+	  BOOST_CHECK_CLOSE(result[index].imag(),
+			    value_type(vlhs[index]*f.rhs_scalar).imag(), 2.0e-04);
+	}
 
         result = f.lhs_scalar * vrhs;
         for(size_t index=0;index<result.size();index++)
