@@ -47,6 +47,11 @@ typedef boost::mpl::list<pni::dynamic_array<pni::uint8>,
                          pni::dynamic_array<pni::complex128>>
                          numeric_dynamic_arrays;
 
+typedef boost::mpl::list<pni::dynamic_array<pni::complex32>,
+                         pni::dynamic_array<pni::complex64>,
+                         pni::dynamic_array<pni::complex128>>
+                         numeric_dynamic_arrays_cx;
+
 typedef boost::mpl::list<pni::dynamic_array<pni::string>,
                          pni::dynamic_array<pni::bool_t>,
                          pni::dynamic_array<hdf5::datatype::EBool>>
@@ -70,6 +75,12 @@ using numeric_fixed_dim_arrays =
                          pni::fixed_dim_array<pni::float64,TDimN>,
                          pni::fixed_dim_array<pni::float128,TDimN>,
                          pni::fixed_dim_array<pni::complex32,TDimN>,
+                         pni::fixed_dim_array<pni::complex64,TDimN>,
+                         pni::fixed_dim_array<pni::complex128,TDimN>>;
+                         
+template<size_t TDimN>
+using numeric_fixed_dim_arrays_cx = 
+        boost::mpl::list<pni::fixed_dim_array<pni::complex32,TDimN>,
                          pni::fixed_dim_array<pni::complex64,TDimN>,
                          pni::fixed_dim_array<pni::complex128,TDimN>>;
                          
@@ -99,6 +110,12 @@ using numeric_static_arrays =
                          pni::static_array<pni::float64,TDimsN... >,
                          pni::static_array<pni::float128,TDimsN... >,
                          pni::static_array<pni::complex32,TDimsN... >,
+                         pni::static_array<pni::complex64,TDimsN... >,
+                         pni::static_array<pni::complex128,TDimsN...>>;
+
+template<size_t... TDimsN>
+using numeric_static_arrays_cx = 
+        boost::mpl::list<pni::static_array<pni::complex32,TDimsN... >,
                          pni::static_array<pni::complex64,TDimsN... >,
                          pni::static_array<pni::complex128,TDimsN...>>;
 

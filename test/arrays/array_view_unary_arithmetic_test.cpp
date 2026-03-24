@@ -30,6 +30,8 @@
 #pragma GCC diagnostic pop
 #endif
 #include <boost/mpl/joint_view.hpp>
+#include <pni/types/types.hpp>
+#include <pni/types/traits.hpp>
 #include "array_types.hpp"
 #include "../data_generator.hpp"
 #include "../math/number_ranges.hpp"
@@ -46,6 +48,18 @@ typedef  boost::mpl::joint_view<numeric_dynamic_arrays,
                                 numeric_fixed_dim_arrays<3>
 #endif
                                 > numeric_array_types;
+
+
+typedef  boost::mpl::joint_view<numeric_dynamic_arrays_cx,
+#if GCC_VERSION > 40800
+                                boost::mpl::joint_view<
+                                numeric_fixed_dim_arrays_cx<3>,
+                                numeric_static_arrays_cx<2,3,5>
+                                >
+#else 
+                                numeric_fixed_dim_arrays_cx<3>
+#endif
+                                > numeric_array_cx_types;
 
 
 template<typename TestArrayT> struct fixture
@@ -228,7 +242,9 @@ BOOST_AUTO_TEST_SUITE(array_view_unary_arithmetic_test)
     {
         typedef fixture<TestArrayT> fixture_type;
         typedef typename TestArrayT::value_type value_type;
-        
+
+	if(!is_complex_type<value_type>::value) {
+	  
         mult_ranges<value_type> ranges;
         fixture_type fixture(ranges.rhs_min(),ranges.rhs_max(),
                              ranges.lhs_min(),ranges.lhs_max());
@@ -244,10 +260,66 @@ BOOST_AUTO_TEST_SUITE(array_view_unary_arithmetic_test)
                                   value_type(fixture.lhs_orig(i,j,3)*
                                              fixture.rhs_scalar));
             }
+	
+	}
     }
 
     //========================================================================
     BOOST_AUTO_TEST_CASE_TEMPLATE(test_mult_array,TestArrayT,numeric_array_types)
+    {
+        typedef fixture<TestArrayT> fixture_type;
+        typedef typename TestArrayT::value_type value_type;
+        
+	if(!is_complex_type<value_type>::value) {
+	  
+        mult_ranges<value_type> ranges;
+        fixture_type fixture(ranges.rhs_min(),ranges.rhs_max(),
+                             ranges.lhs_min(),ranges.lhs_max());
+
+        auto view = fixture.lhs(1,slice(0,3),slice(0,5));
+        dynamic_array<value_type> orig(view);
+        auto view_shape = view.template shape<shape_t>();
+        auto rhs = dynamic_array<value_type>::create(view_shape);
+        std::generate(rhs.begin(),rhs.end(),fixture.generator_rhs);
+
+        view *= rhs;
+
+        auto orig_iter = orig.begin();
+        auto rhs_iter  = rhs.begin();
+        for(auto v: view)
+            BOOST_CHECK_EQUAL(v,value_type((*orig_iter++)*(*rhs_iter++)));
+
+	}
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(test_mult_scalar_cx,TestArrayT,numeric_array_cx_types)
+    {
+        typedef fixture<TestArrayT> fixture_type;
+        typedef typename TestArrayT::value_type value_type;
+        
+        mult_ranges<value_type> ranges;
+        fixture_type fixture(ranges.rhs_min(),ranges.rhs_max(),
+                             ranges.lhs_min(),ranges.lhs_max());
+
+        auto view = fixture.lhs(slice(0,2),slice(0,2),3);
+        view *= fixture.rhs_scalar;
+        
+        for(size_t i=0;i<2;++i)
+            for(size_t j=0;j<2;++j)
+            {
+                BOOST_CHECK_EQUAL(view(i,j),fixture.lhs(i,j,3));
+                BOOST_CHECK_CLOSE(view(i,j).real(),
+                                  value_type(fixture.lhs_orig(i,j,3)*
+                                             fixture.rhs_scalar).real(), 2.0e-04);
+                BOOST_CHECK_CLOSE(view(i,j).imag(),
+                                  value_type(fixture.lhs_orig(i,j,3)*
+                                             fixture.rhs_scalar).imag(), 2.0e-04);
+            }
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(test_mult_array_cx,TestArrayT,numeric_array_cx_types)
     {
         typedef fixture<TestArrayT> fixture_type;
         typedef typename TestArrayT::value_type value_type;
@@ -266,8 +338,10 @@ BOOST_AUTO_TEST_SUITE(array_view_unary_arithmetic_test)
 
         auto orig_iter = orig.begin();
         auto rhs_iter  = rhs.begin();
-        for(auto v: view)
-            BOOST_CHECK_EQUAL(v,value_type((*orig_iter++)*(*rhs_iter++)));
+        for(auto v: view) {
+	  BOOST_CHECK_CLOSE(v.imag(),value_type((*orig_iter)*(*rhs_iter)).imag(), 2.0e-04);
+	  BOOST_CHECK_CLOSE(v.real(),value_type((*orig_iter++)*(*rhs_iter++)).real(), 2.0e-04);
+	}
     }
 
 BOOST_AUTO_TEST_SUITE_END()

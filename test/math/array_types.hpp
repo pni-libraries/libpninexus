@@ -85,3 +85,28 @@ typedef boost::mpl::joint_view<
                                                       fixed_dim_array_types>,
                                static_array_types> all_array_types;
 
+
+
+typedef boost::mpl::list<
+                         pni::dynamic_array<pni::complex32>,
+                         pni::dynamic_array<pni::complex64>,
+                         pni::dynamic_array<pni::complex128>
+                        > dyn_array_cx_types;
+
+typedef boost::mpl::list<
+                         pni::fixed_dim_array<pni::complex32,3>,
+                         pni::fixed_dim_array<pni::complex64,3>,
+                         pni::fixed_dim_array<pni::complex128,3>
+                        > fixed_dim_array_cx_types;
+
+typedef boost::mpl::list<
+                         pni::static_array<pni::complex32,2,3,4>,
+                         pni::static_array<pni::complex64,2,3,4>,
+                         pni::static_array<pni::complex128,2,3,4>
+                        > static_array_cx_types;
+
+typedef boost::mpl::joint_view<
+                               boost::mpl::joint_view<dyn_array_cx_types,
+                                                      fixed_dim_array_cx_types>,
+                               static_array_cx_types> all_array_cx_types;
+
