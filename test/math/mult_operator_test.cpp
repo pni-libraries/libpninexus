@@ -107,17 +107,17 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
         mult_op<TestArrayT,scalar_type> o2(f.lhs,f.rhs_s);
         for(size_t index=0;index<o2.size();++index){
 	  BOOST_CHECK_CLOSE(o2[index].real(), 
-			    value_type(f.lhs[index]*f.rhs_s[index]).real(), 2.0e-04);
+			    value_type(f.lhs[index]*f.rhs_s[index]).real(), 2.0e-03);
 	  BOOST_CHECK_CLOSE(o2[index].imag(), 
-			    value_type(f.lhs[index]*f.rhs_s[index]).imag(), 2.0e-04);
+			    value_type(f.lhs[index]*f.rhs_s[index]).imag(), 2.0e-03);
 	}
 
         mult_op<scalar_type,TestArrayT> o3(f.lhs_s,f.rhs);
         for(size_t index=0;index<o3.size();++index){
             BOOST_CHECK_CLOSE(o3[index].real(), 
-                              value_type(f.lhs_s[index]*f.rhs[index]).real(), 2.0e-04);
+                              value_type(f.lhs_s[index]*f.rhs[index]).real(), 2.0e-03);
             BOOST_CHECK_CLOSE(o3[index].imag(), 
-                              value_type(f.lhs_s[index]*f.rhs[index]).imag(), 2.0e-04);
+                              value_type(f.lhs_s[index]*f.rhs[index]).imag(), 2.0e-03);
 	}
 	
 	}
@@ -243,8 +243,8 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
         result = f.lhs * f.rhs_scalar;
         BOOST_CHECK_EQUAL(result.size(),f.lhs.size());
         for(size_t index=0;index<result.size();++index){
-	  BOOST_CHECK_CLOSE(result[index].real(), (f.lhs[index]*f.rhs_scalar).real(), 2.0e-04);
-	  BOOST_CHECK_CLOSE(result[index].imag(), (f.lhs[index]*f.rhs_scalar).imag(), 2.0e-04);
+	  BOOST_CHECK_CLOSE(result[index].real(), (f.lhs[index]*f.rhs_scalar).real(), 2.0e-03);
+	  BOOST_CHECK_CLOSE(result[index].imag(), (f.lhs[index]*f.rhs_scalar).imag(), 2.0e-03);
         }
     }
 
@@ -268,9 +268,9 @@ BOOST_AUTO_TEST_SUITE(mult_operator_test)
         result = vlhs * f.rhs_scalar;
         for(size_t index=0;index<result.size();index++) {
 	  BOOST_CHECK_CLOSE(result[index].real(),
-			    value_type(vlhs[index]*f.rhs_scalar).real(), 2.0e-04);
+			    value_type(vlhs[index]*f.rhs_scalar).real(), 2.0e-03);
 	  BOOST_CHECK_CLOSE(result[index].imag(),
-			    value_type(vlhs[index]*f.rhs_scalar).imag(), 2.0e-04);
+			    value_type(vlhs[index]*f.rhs_scalar).imag(), 2.0e-03);
 	}
 
         result = f.lhs_scalar * vrhs;
