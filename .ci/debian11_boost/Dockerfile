@@ -23,7 +23,7 @@ RUN apt-get clean
 RUN mkdir -p /opt/h5cpp
 RUN mkdir -p /h5cpp-src
 RUN cd /h5cpp-src && git clone https://github.com/ess-dmsc/h5cpp && mkdir build
-RUN cd /h5cpp-src/build && cmake -DCMAKE_INSTALL_PREFIX=/opt/h5cpp -DCMAKE_BUILD_TYPE=Release -DH5CPP_CONAN=DISABLE -DH5CPP_DISABLE_TESTS=True -DH5CPP_WITH_BOOST=True ../h5cpp && make install -j4
+RUN cd /h5cpp-src/build && cmake -DCMAKE_INSTALL_PREFIX=/opt/h5cpp -DCMAKE_BUILD_TYPE=Release -DH5CPP_CONAN=DISABLE  -DH5CPP_OLD_CMAKE=ON -DH5CPP_DISABLE_TESTS=True -DH5CPP_WITH_BOOST=True ../h5cpp && make install -j4
 
 # add p00user
 RUN useradd -rm -d /home/p00user -s /bin/bash p00user
