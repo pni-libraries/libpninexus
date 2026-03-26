@@ -37,7 +37,15 @@ jobs:
       - name: Cmake config
         env:
           BUILDTYPE: ${{ matrix.buildtype }}
+        if: (matrix.os != 'debian11_boost') && (matrix.os != 'debian11')
         run: docker  exec build /bin/bash -c "mkdir ../build && cd ../build && cmake -DPNINEXUS_CONAN=DISABLE -DCMAKE_BUILD_TYPE=$BUILDTYPE ../src"
+        # run: docker  exec build /bin/bash -c "cd build && cmake -G Ninja -Dh5cpp_DIR=/opt/h5cpp/lib/cmake/h5cpp-0.5 -DPNINEXUS_CONAN=DISABLE -DCMAKE_BUILD_TYPE=$BUILDTYPE .."
+
+      - name: Cmake config with old cmake
+        env:
+          BUILDTYPE: ${{ matrix.buildtype }}
+        if: (matrix.os == 'debian11_boost') || (matrix.os == 'debian11')
+        run: docker  exec build /bin/bash -c "mkdir ../build && cd ../build && cmake -DPNINEXUS_CONAN=DISABLE -DPNINEXUS_OLD_CMAKE=ON -DCMAKE_BUILD_TYPE=$BUILDTYPE ../src"
         # run: docker  exec build /bin/bash -c "cd build && cmake -G Ninja -Dh5cpp_DIR=/opt/h5cpp/lib/cmake/h5cpp-0.5 -DPNINEXUS_CONAN=DISABLE -DCMAKE_BUILD_TYPE=$BUILDTYPE .."
 
       - name: Build all
