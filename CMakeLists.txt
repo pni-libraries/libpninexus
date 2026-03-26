@@ -17,7 +17,7 @@ include(CTest)
 set(LIBRARY_VERSION ${PROJECT_VERSION})
 set(SO_VERSION ${PROJECT_VERSION})
 
-
+option(PNINEXUS_OLD_CMAKE "enable support for old cmake versions" OFF)
 
 #---------------------------------------------------------------------------------
 # Augment CMake with our custom scripts
@@ -25,6 +25,10 @@ set(SO_VERSION ${PROJECT_VERSION})
 set(EXTRA_MODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 list(APPEND CMAKE_MODULE_PATH ${EXTRA_MODULES_DIR})
 
+if (PNINEXUS_OLD_CMAKE)
+  set(EXTRA_OLDMODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake/old)
+  list(APPEND CMAKE_MODULE_PATH ${EXTRA_OLDMODULES_DIR})
+endif()
 
 if (NOT DEFINED BUILD_SHARED_LIBS)
   set(BUILD_SHARED_LIBS ON)
