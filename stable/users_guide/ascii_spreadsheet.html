@@ -1,22 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Spreadsheet like ASCII files &#8212; libpninexus 3.3.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    <title>Spreadsheet like ASCII files &#8212; libpninexus 3.4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=f6a2cb11" />
     
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=b0e360d0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -27,7 +23,7 @@
     <script src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +35,7 @@
         <li class="right" >
           <a href="ascii_lowlevel.html" title="The low-level ASCII interface"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">libpninexus 3.3.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">libpninexus 3.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Users guide</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="legacy.html" >Legacy formats</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="ascii.html" accesskey="U">Reading ASCII data</a> &#187;</li>
@@ -53,16 +49,17 @@
           <div class="body" role="main">
             
   <section id="spreadsheet-like-ascii-files">
-<h1>Spreadsheet like ASCII files<a class="headerlink" href="#spreadsheet-like-ascii-files" title="Permalink to this heading">¶</a></h1>
+<h1>Spreadsheet like ASCII files<a class="headerlink" href="#spreadsheet-like-ascii-files" title="Link to this heading">¶</a></h1>
 <p>Many ASCII formats use a speadsheet like scheme to organize their data,
 basically storing data in rows and columns. Some formats like SPEC allow
 to store multiple runs in a single file (SPEC calls them scans) while others,
 like FIO, store only a single run per file and endcode the run number in the
 file name.</p>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/data_readers.svg"><img alt="../_images/data_readers.svg" src="../_images/data_readers.svg" width="65%" /></a>
+<a class="reference internal image-reference" href="../_images/data_readers.svg"><img alt="../_images/data_readers.svg" src="../_images/data_readers.svg" style="width: 65%;" />
+</a>
 <figcaption>
-<p><span class="caption-text">Hierarchy of reader classes in <em>libpninexus</em>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Hierarchy of reader classes in <em>libpninexus</em>.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Spreadsheet readers favor column based over record based access. Not only
@@ -89,7 +86,7 @@ spreadsheet, namely</p>
 </div>
 <p>For more details see the <a class="reference internal" href="../api/ascii_spreadsheet.html#ascii-spreadsheet-api"><span class="std std-ref">ASCII spreadsheet API</span></a>.</p>
 <section id="fio-file-support">
-<h2>FIO file support<a class="headerlink" href="#fio-file-support" title="Permalink to this heading">¶</a></h2>
+<h2>FIO file support<a class="headerlink" href="#fio-file-support" title="Link to this heading">¶</a></h2>
 <p>FIO is the old file format used at DESY. Every run (sometimes called scan) is
 stored in a single file where the run number is encoded in the name of the file.
 A FIO file can be roughly divided into three sections</p>
@@ -149,7 +146,7 @@ Opening a FIO file works as with any other reader</p>
 </pre></div>
 </div>
 <section id="accessing-parameters">
-<h3>Accessing parameters<a class="headerlink" href="#accessing-parameters" title="Permalink to this heading">¶</a></h3>
+<h3>Accessing parameters<a class="headerlink" href="#accessing-parameters" title="Link to this heading">¶</a></h3>
 <p>Accessing parameters (stored as key value pairs) is done via the
 <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">parameter()</span></code> template member function. Its template parameter determines
 the requested data type for the parameter value</p>
@@ -160,7 +157,7 @@ the requested data type for the parameter value</p>
 </div>
 </section>
 <section id="accessing-columns">
-<h3>Accessing columns<a class="headerlink" href="#accessing-columns" title="Permalink to this heading">¶</a></h3>
+<h3>Accessing columns<a class="headerlink" href="#accessing-columns" title="Link to this heading">¶</a></h3>
 <p>Columns are accessed via the <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">column()</span></code> template member function
 where the template parameter is typically the container type used to
 store the column data</p>
@@ -184,7 +181,7 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../index.html">Table of Contents</a></h3>
@@ -210,7 +207,7 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
     <p class="topless"><a href="image.html"
                           title="next chapter">Reading binary image data</a></p>
   </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -218,7 +215,7 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script><p>
   <h3 class='versions'>Versions</h3>
   <p>
@@ -226,6 +223,7 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
       <li><a class="reference external" href="../index/../../latest/index.html">v:latest</a></li>
       <li><a class="reference external" href="../index/../../stable/index.html">v:stable</a></li>
       
+      <li><a class="reference external" href="../index/../../v3.4.0/index.html">v3.4.0</a></li>
       <li><a class="reference external" href="../index/../../v3.3.0/index.html">v3.3.0</a></li>
       <li><a class="reference external" href="../index/../../v3.2.0/index.html">v3.2.0</a></li>
       <li><a class="reference external" href="../index/../../v3.1.0/index.html">v3.1.0</a></li>
@@ -245,7 +243,7 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -257,7 +255,7 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
         <li class="right" >
           <a href="ascii_lowlevel.html" title="The low-level ASCII interface"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">libpninexus 3.3.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">libpninexus 3.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Users guide</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="legacy.html" >Legacy formats</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="ascii.html" >Reading ASCII data</a> &#187;</li>
@@ -265,8 +263,8 @@ argument to <code class="xref cpp cpp-func docutils literal notranslate"><span c
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, DESY, Eugen Wintersberger.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    &#169; Copyright 2018, DESY, Eugen Wintersberger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>

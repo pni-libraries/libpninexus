@@ -1,11 +1,19 @@
 <map id="pni::nexus::IsBaseClass" name="pni::nexus::IsBaseClass">
-<area shape="rect" id="node1" title="predicate to search for base classes" alt="" coords="245,157,420,184"/>
-<area shape="rect" id="node3" href="$classpni_1_1nexus_1_1IsData.html" title="matches NXdata" alt="" coords="502,5,641,32"/>
-<area shape="rect" id="node4" href="$classpni_1_1nexus_1_1IsDetector.html" title="matches NXdetector" alt="" coords="489,56,653,83"/>
-<area shape="rect" id="node5" href="$classpni_1_1nexus_1_1IsEntry.html" title="matches NXentry" alt="" coords="500,107,643,133"/>
-<area shape="rect" id="node6" href="$classpni_1_1nexus_1_1IsInstrument.html" title="matches NXinstrument" alt="" coords="482,157,661,184"/>
-<area shape="rect" id="node7" href="$classpni_1_1nexus_1_1IsSample.html" title="matches NXsample" alt="" coords="493,208,650,235"/>
-<area shape="rect" id="node8" href="$classpni_1_1nexus_1_1IsSubentry.html" title="matches NXsubentry" alt="" coords="488,259,655,285"/>
-<area shape="rect" id="node9" href="$classpni_1_1nexus_1_1IsTransformation.html" title="matches an NXtransformations" alt="" coords="468,309,675,336"/>
-<area shape="rect" id="node2" href="$classpni_1_1nexus_1_1NodePredicate.html" title="abstract predicate interface for nodes" alt="" coords="5,157,197,184"/>
+<area shape="rect" id="Node000001" title="predicate to search for base classes" alt="" coords="245,153,420,179"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1nexus_1_1IsData.html" title="matches NXdata" alt="" coords="502,5,641,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="351,141,399,89,431,62,467,40,501,26,503,31,469,44,435,67,403,93,354,145"/>
+<area shape="rect" id="Node000004" href="$classpni_1_1nexus_1_1IsDetector.html" title="matches NXdetector" alt="" coords="489,55,653,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="363,143,411,115,467,89,503,78,505,83,469,94,413,120,366,148"/>
+<area shape="rect" id="Node000005" href="$classpni_1_1nexus_1_1IsEntry.html" title="matches NXentry" alt="" coords="500,104,643,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="407,148,508,127,510,132,408,153"/>
+<area shape="rect" id="Node000006" href="$classpni_1_1nexus_1_1IsInstrument.html" title="matches NXinstrument" alt="" coords="482,153,661,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="434,163,482,163,482,169,434,169"/>
+<area shape="rect" id="Node000007" href="$classpni_1_1nexus_1_1IsSample.html" title="matches NXsample" alt="" coords="493,203,650,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="408,179,510,200,508,205,407,184"/>
+<area shape="rect" id="Node000008" href="$classpni_1_1nexus_1_1IsSubentry.html" title="matches NXsubentry" alt="" coords="488,252,655,277"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="366,184,413,212,469,238,505,249,503,254,467,243,411,217,363,189"/>
+<area shape="rect" id="Node000009" href="$classpni_1_1nexus_1_1IsTransformation.html" title="matches an NXtransformations" alt="" coords="468,301,675,327"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="354,187,403,239,435,265,469,288,496,299,494,304,467,292,431,270,399,243,351,191"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1nexus_1_1NodePredicate.html" title="abstract predicate interface for nodes" alt="" coords="5,153,197,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,163,245,163,245,169,211,169"/>
 </map>
