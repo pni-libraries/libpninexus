@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "PNI NeXus Library", "index.html", [
-    [ "PNI NeXus Library 3.3.0 Documentation", "index.html", "index" ],
+    [ "PNI NeXus Library 3.4.0 Documentation", "index.html", "index" ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
