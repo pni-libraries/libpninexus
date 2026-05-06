@@ -1,0 +1,24 @@
+<map id="pni::nexus::xml::FieldBuilder" name="pni::nexus::xml::FieldBuilder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1307,156,1513,181"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1nexus_1_1xml_1_1ObjectBuilder.html" title=" " alt="" coords="519,35,737,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="751,47,948,60,1059,72,1169,90,1227,103,1283,121,1377,153,1375,158,1282,126,1225,108,1167,95,1058,78,947,65,751,53"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1nexus_1_1ObjectBuilder.html" title="a simple object builder interface" alt="" coords="209,5,395,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,25,519,35,518,40,408,30"/>
+<area shape="rect" id="Node000004" href="$classpni_1_1nexus_1_1xml_1_1Node.html" title="alias for ptree" alt="" coords="220,137,384,163"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="330,127,370,102,418,80,467,65,518,55,519,60,469,70,420,84,373,107,333,132"/>
+<area shape="rect" id="Node000006" href="$classpni_1_1nexus_1_1xml_1_1DataspaceBuilder.html" title=" " alt="" coords="529,198,727,238"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="357,164,419,181,529,201,528,207,418,186,355,169"/>
+<area shape="rect" id="Node000007" href="$classpni_1_1nexus_1_1xml_1_1DatatypeBuilder.html" title="builds datatypes from XML nodes" alt="" coords="767,79,957,119"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="389,133,418,129,604,111,766,101,767,106,604,117,419,134,390,138"/>
+<area shape="rect" id="Node000008" href="$classpni_1_1nexus_1_1xml_1_1DatasetCreationListBuilder.html" title=" " alt="" coords="987,149,1168,189"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="398,150,986,164,986,169,398,155"/>
+<area shape="rect" id="Node000009" href="$classpni_1_1nexus_1_1xml_1_1DataWriter.html" title=" " alt="" coords="761,271,963,296"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="335,168,375,192,420,216,506,246,597,266,684,277,761,281,761,287,684,282,596,271,505,251,418,220,372,197,332,173"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,130,160,170"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,147,220,147,220,153,174,153"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="741,221,940,224,1054,221,1168,213,1269,198,1357,179,1358,184,1270,203,1168,218,1055,226,940,229,741,226"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="741,204,962,181,986,178,987,183,963,186,741,210"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="971,108,1283,146,1332,153,1331,159,1282,151,971,113"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="1182,166,1306,166,1306,171,1182,171"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="977,289,1047,288,1125,283,1205,269,1282,245,1343,212,1391,179,1394,184,1346,217,1284,250,1206,274,1126,288,1047,294,977,294"/>
+</map>

@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data types and type management &#8212; libpninexus 3.4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=f6a2cb11" />
+    
+    <script src="../_static/documentation_options.js?v=b0e360d0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Type erasures" href="core_type_erasure.html" />
+    <link rel="prev" title="Utility functions and classes" href="nexus_utils.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="core_type_erasure.html" title="Type erasures"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="nexus_utils.html" title="Utility functions and classes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">libpninexus 3.4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Data types and type management</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="data-types-and-type-management">
+<h1>Data types and type management<a class="headerlink" href="#data-types-and-type-management" title="Link to this heading">¶</a></h1>
+<section id="pni-type-id-t">
+<h2><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">pni::type_id_t</span></code><a class="headerlink" href="#pni-type-id-t" title="Link to this heading">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenenum: Cannot find enum “pni::type_id_t” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+<section id="operators">
+<h3>Operators<a class="headerlink" href="#operators" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “operator&lt;&lt;” with arguments (std::ostream&amp;, const type_id_t&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">Node</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_argument_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_help_request</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_option_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">column_info</span> <span class="o">&amp;</span><span class="n">ci</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">exception_record</span> <span class="o">&amp;</span><span class="n">rec</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">file_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">filter_not_available</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">image_info</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">index_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">invalid_object_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">io_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">iterator_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">key_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">link_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">memory_allocation_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">memory_not_allocated_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">not_implemented_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">object_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">parser_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">range_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">shape_mismatch_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">size_mismatch_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">tiff_reader</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">type_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">value_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span><span class="p">::</span><span class="n">Element</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">PathObject</span><span class="p">::</span><span class="n">Type</span> <span class="o">&amp;</span><span class="nb">type</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">version</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">bool_t</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span> <span class="n">exception</span><span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">ifd</span> <span class="o">&amp;</span><span class="n">image_dir</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">ifd_entry</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">strip_reader</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">tiff_read_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ArrayT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ElementT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">IntegerT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">rational</span><span class="o">&lt;</span><span class="n">IntegerT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StorageT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="predicates">
+<h3>Predicates<a class="headerlink" href="#predicates" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “is_numeric” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “is_integer” with arguments (type_id_t) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="nb">bool</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">const</span> <span class="n">pni</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="nb">input</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “is_complex” with arguments (type_id_t) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="nb">bool</span> <span class="n">is_complex</span><span class="p">(</span><span class="n">const</span> <span class="n">pni</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="nb">input</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “is_float” with arguments (type_id_t) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="nb">bool</span> <span class="n">is_float</span><span class="p">(</span><span class="n">const</span> <span class="n">pni</span><span class="p">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="nb">input</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “is_checked_convertible” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “is_unchecked_convertible” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “is_convertible” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+</section>
+<section id="utility-functions">
+<h3>Utility functions<a class="headerlink" href="#utility-functions" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “type_id_from_str” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “str_from_type_id” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “type_id” with arguments (const GeneralT&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">(</span><span class="n">const</span> <span class="n">array</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">(</span><span class="n">const</span> <span class="n">value</span> <span class="o">&amp;</span><span class="n">rv</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">pni</span><span class="p">::</span><span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">pni</span><span class="p">::</span><span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">pni</span><span class="p">::</span><span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">-</span> <span class="n">type_id_t</span> <span class="n">type_id</span><span class="p">()</span> <span class="n">const</span> <span class="n">noexcept</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="pni-type-class-t">
+<h2><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">pni::type_class_t</span></code><a class="headerlink" href="#pni-type-class-t" title="Link to this heading">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenenum: Cannot find enum “pni::type_class_t” in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml</p>
+</div>
+</section>
+<section id="pni-bool-t">
+<h2><a class="reference internal" href="#_CPPv4N3pni6bool_tE" title="pni::bool_t"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::bool_t</span></code></a><a class="headerlink" href="#pni-bool-t" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni6bool_tE">
+<span id="_CPPv3N3pni6bool_tE"></span><span id="_CPPv2N3pni6bool_tE"></span><span id="pni::bool_t"></span><span class="target" id="classpni_1_1bool__t"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bool_t</span></span></span><a class="headerlink" href="#_CPPv4N3pni6bool_tE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>boolean type </p>
+<p>There is a particular problem when using the standard bool type in connection with std::vector. The std::vector template is overloaded for bool in a sense that each boolean value is stored in an individual bit. Thus elements cannot be addressed. Thus std::vector&lt;bool&gt; cannot be used in connection with libpninexus. This type prevents the C++ compiler to overload std:vector&lt;bool_t&gt; making boolean values available for libpninexus. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni6bool_t6bool_tEv">
+<span id="_CPPv3N3pni6bool_t6bool_tEv"></span><span id="_CPPv2N3pni6bool_t6bool_tEv"></span><span id="pni::bool_t::bool_t"></span><span class="target" id="classpni_1_1bool__t_1ab9df2f212a254a3c51ee72a332bbad30"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bool_t</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3pni6bool_t6bool_tEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni6bool_t6bool_tEb">
+<span id="_CPPv3N3pni6bool_t6bool_tEb"></span><span id="_CPPv2N3pni6bool_t6bool_tEb"></span><span id="pni::bool_t::bool_t__b"></span><span class="target" id="classpni_1_1bool__t_1a55ba2a02d61a7f4422e43dccd378191a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bool_t</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3pni6bool_t6bool_tEb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>conversion constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3pni6bool_tcvbEv">
+<span id="_CPPv3NK3pni6bool_tcvbEv"></span><span id="_CPPv2NK3pni6bool_tcvbEv"></span><span id="pni::bool_t::castto-b-operatorC"></span><span class="target" id="classpni_1_1bool__t_1a37d8fcd08f5e2ff79192d380dfec826d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3pni6bool_tcvbEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>conversion operator </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="pni-none">
+<h2><a class="reference internal" href="#_CPPv4N3pni4noneE" title="pni::none"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::none</span></code></a><a class="headerlink" href="#pni-none" title="Link to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni4noneE">
+<span id="_CPPv3N3pni4noneE"></span><span id="_CPPv2N3pni4noneE"></span><span id="pni::none"></span><span class="target" id="structpni_1_1none"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">none</span></span></span><a class="headerlink" href="#_CPPv4N3pni4noneE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>none type </p>
+<p>This type is used in situations where a type for initialization is required but not provided (or at the moment not available). It thus denotes the absence of type information. </p>
+</dd></dl>
+
+<section id="id1">
+<h3>Operators<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “operator&lt;&lt;” with arguments (std::ostream&amp;, const none&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">Node</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_argument_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_help_request</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">cli_option_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">column_info</span> <span class="o">&amp;</span><span class="n">ci</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">exception_record</span> <span class="o">&amp;</span><span class="n">rec</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">file_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">filter_not_available</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">image_info</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">index_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">invalid_object_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">io_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">iterator_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">key_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">link_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">memory_allocation_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">memory_not_allocated_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">not_implemented_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">object_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">parser_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">range_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">shape_mismatch_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">size_mismatch_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">tiff_reader</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">type_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">value_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span><span class="p">::</span><span class="n">Element</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">PathObject</span><span class="p">::</span><span class="n">Type</span> <span class="o">&amp;</span><span class="nb">type</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">version</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">bool_t</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">const</span> <span class="n">exception</span><span class="o">&amp;</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">ifd</span> <span class="o">&amp;</span><span class="n">image_dir</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">ifd_entry</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">strip_reader</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">tiff_read_error</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ArrayT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ElementT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">IntegerT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">rational</span><span class="o">&lt;</span><span class="n">IntegerT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StorageT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “operator&gt;&gt;” with arguments (std::istream&amp;, none&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">version</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">bool_t</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">hdf5</span><span class="p">::</span><span class="n">datatype</span><span class="p">::</span><span class="n">EBool</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ArrayT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ElementT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="ow">is</span><span class="p">,</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StorageT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="ow">is</span><span class="p">,</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “operator==” with arguments (const none&amp;, const none&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">Path</span><span class="p">::</span><span class="n">Element</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span><span class="p">::</span><span class="n">Element</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">const</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ArrayT</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ElementT</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StorageT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b1</span><span class="p">,</span> <span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “operator!=” with arguments (const none&amp;, const none&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">Path</span><span class="p">::</span><span class="n">Element</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">Path</span><span class="p">::</span><span class="n">Element</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">const</span> <span class="n">Version</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex128</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">complex64</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">complex32</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">iterator_type</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span> <span class="n">const</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ArrayT</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ElementT</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StorageT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b1</span><span class="p">,</span> <span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">b2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="pni-binary-t">
+<h2><a class="reference internal" href="#_CPPv4I0EN3pni8binary_tE" title="pni::binary_t"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::binary_t</span></code></a><a class="headerlink" href="#pni-binary-t" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3pni8binary_tE">
+<span id="_CPPv3I0EN3pni8binary_tE"></span><span id="_CPPv2I0EN3pni8binary_tE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NativeT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classpni_1_1binary__t"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binary_t</span></span></span><a class="headerlink" href="#_CPPv4I0EN3pni8binary_tE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Binary data type. </p>
+<p>This class represents a binary data type. Typically binary data is represented by a typedef to an unsigned char type. However, this has an inconvenience: the unsigned char and the typedef for binary are indistinguishable by the compiler. Thus, such a binary type cannot be used for function overloading or for template specialization - it would always be treated by the compiler as the underlying unsigned char type. </p>
+<p>To circumvent this problem <code class="docutils literal notranslate"><span class="pre">libpninexus</span></code> defines this binary type which can be used instead of a simple typedef to unsigned char. The BinaryType template has several advantages:</p>
+<p><ul class="simple">
+<li><p>it can be distinguished from the type used to store binary data </p></li>
+<li><p>all arithmetic operators are stripped from the type.</p></li>
+</ul>
+
+Thus this type cannot be used for arithmetic operations directly. Its primary purpose is to hold uninterpreted binary data for transfer. However it can be converted to the native type used to hold the data. Stream operators are provided for IO operations using binary data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>NativeT</strong> – native type used to store binary data </p>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni8binary_t12storage_typeE">
+<span id="_CPPv3N3pni8binary_t12storage_typeE"></span><span id="_CPPv2N3pni8binary_t12storage_typeE"></span><span id="pni::binary_t::storage_type"></span><span class="target" id="classpni_1_1binary__t_1ac7018c065a00c842d45d6416ed30c22e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3pni8binary_tE" title="pni::binary_t::NativeT"><span class="n"><span class="pre">NativeT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">storage_type</span></span></span><a class="headerlink" href="#_CPPv4N3pni8binary_t12storage_typeE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>native type that is used for binary data </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni8binary_t8binary_tEv">
+<span id="_CPPv3N3pni8binary_t8binary_tEv"></span><span id="_CPPv2N3pni8binary_t8binary_tEv"></span><span id="pni::binary_t::binary_t"></span><span class="target" id="classpni_1_1binary__t_1afb0b2a804050279ffbbff8cd286ab482"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binary_t</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3pni8binary_t8binary_tEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>default constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni8binary_t8binary_tERK12storage_type">
+<span id="_CPPv3N3pni8binary_t8binary_tERK12storage_type"></span><span id="_CPPv2N3pni8binary_t8binary_tERK12storage_type"></span><span id="pni::binary_t::binary_t__storage_typeCR"></span><span class="target" id="classpni_1_1binary__t_1aa9967391d5804f2fd9bde460209234b1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binary_t</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3pni8binary_t12storage_typeE" title="pni::binary_t::storage_type"><span class="n"><span class="pre">storage_type</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3pni8binary_t8binary_tERK12storage_type" title="Link to this definition">¶</a><br /></dt>
+<dd><p>constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3pni8binary_t8binary_tERK8binary_tI12storage_typeE">
+<span id="_CPPv3N3pni8binary_t8binary_tERK8binary_tI12storage_typeE"></span><span id="_CPPv2N3pni8binary_t8binary_tERK8binary_tI12storage_typeE"></span><span id="pni::binary_t::binary_t__binary_t:storage_type:CR"></span><span class="target" id="classpni_1_1binary__t_1a3ac008397b9a0641d9250455d25a7e38"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">binary_t</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3pni8binary_t8binary_tERK8binary_tI12storage_typeE" title="pni::binary_t::binary_t"><span class="n"><span class="pre">binary_t</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3pni8binary_t12storage_typeE" title="pni::binary_t::storage_type"><span class="n"><span class="pre">storage_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3pni8binary_t8binary_tERK8binary_tI12storage_typeE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>copy constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3pni8binary_tcv7NativeTEv">
+<span id="_CPPv3NK3pni8binary_tcv7NativeTEv"></span><span id="_CPPv2NK3pni8binary_tcv7NativeTEv"></span><span id="pni::binary_t::castto-NativeT-operatorC"></span><span class="target" id="classpni_1_1binary__t_1af164ab5afbd4529b4139c9cdf3f863a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3pni8binary_tE" title="pni::binary_t::NativeT"><span class="n"><span class="pre">NativeT</span></span></a></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3pni8binary_tcv7NativeTEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>conversion operator</p>
+<p>Allows a conversion from BinaryType&lt;NativeT&gt; to the underlying NativeT. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve function “pni::operator&lt;&lt;” with arguments (std::ostream&amp;, const binary_t&lt;NativeT&gt;&amp;) in doxygen xml output for project “libpninexus” from directory: /home/p00user/build/doc/api/xml.
+Potential matches:
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">column_info</span> <span class="o">&amp;</span><span class="n">ci</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">exception_record</span> <span class="o">&amp;</span><span class="n">rec</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="nb">slice</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">PNINEXUS_EXPORT</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">bool_t</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ArrayT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">stream</span><span class="p">,</span> <span class="n">const</span> <span class="n">array_view</span><span class="o">&lt;</span><span class="n">ArrayT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">ElementT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="n">const</span> <span class="n">scalar</span><span class="o">&lt;</span><span class="n">ElementT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StorageT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">o</span><span class="p">,</span> <span class="n">const</span> <span class="n">mdarray</span><span class="o">&lt;</span><span class="n">StorageT</span><span class="p">,</span> <span class="n">IndexMapT</span><span class="p">,</span> <span class="n">InplaceArithmeticT</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Data types and type management</a><ul>
+<li><a class="reference internal" href="#pni-type-id-t"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">pni::type_id_t</span></code></a><ul>
+<li><a class="reference internal" href="#operators">Operators</a></li>
+<li><a class="reference internal" href="#predicates">Predicates</a></li>
+<li><a class="reference internal" href="#utility-functions">Utility functions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pni-type-class-t"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">pni::type_class_t</span></code></a></li>
+<li><a class="reference internal" href="#pni-bool-t"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::bool_t</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N3pni6bool_tE"><code class="docutils literal notranslate"><span class="pre">bool_t</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N3pni6bool_t6bool_tEv"><code class="docutils literal notranslate"><span class="pre">bool_t::bool_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3pni6bool_t6bool_tEb"><code class="docutils literal notranslate"><span class="pre">bool_t::bool_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK3pni6bool_tcvbEv"><code class="docutils literal notranslate"><span class="pre">bool_t::operator</span> <span class="pre">bool()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pni-none"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::none</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N3pni4noneE"><code class="docutils literal notranslate"><span class="pre">none</span></code></a></li>
+<li><a class="reference internal" href="#id1">Operators</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pni-binary-t"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">pni::binary_t</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4I0EN3pni8binary_tE"><code class="docutils literal notranslate"><span class="pre">binary_t</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N3pni8binary_t12storage_typeE"><code class="docutils literal notranslate"><span class="pre">binary_t::storage_type</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3pni8binary_t8binary_tEv"><code class="docutils literal notranslate"><span class="pre">binary_t::binary_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3pni8binary_t8binary_tERK12storage_type"><code class="docutils literal notranslate"><span class="pre">binary_t::binary_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3pni8binary_t8binary_tERK8binary_tI12storage_typeE"><code class="docutils literal notranslate"><span class="pre">binary_t::binary_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK3pni8binary_tcv7NativeTEv"><code class="docutils literal notranslate"><span class="pre">binary_t::operator</span> <span class="pre">NativeT()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="nexus_utils.html"
+                          title="previous chapter">Utility functions and classes</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="core_type_erasure.html"
+                          title="next chapter">Type erasures</a></p>
+  </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><p>
+  <h3 class='versions'>Versions</h3>
+  <p>
+    <ul>
+      <li><a class="reference external" href="../index/../../latest/index.html">v:latest</a></li>
+      <li><a class="reference external" href="../index/../../stable/index.html">v:stable</a></li>
+      
+      <li><a class="reference external" href="../index/../../v3.4.0/index.html">v3.4.0</a></li>
+      <li><a class="reference external" href="../index/../../v3.3.0/index.html">v3.3.0</a></li>
+      <li><a class="reference external" href="../index/../../v3.2.0/index.html">v3.2.0</a></li>
+      <li><a class="reference external" href="../index/../../v3.1.0/index.html">v3.1.0</a></li>
+      <li><a class="reference external" href="../index/../../v3.0.4/index.html">v3.0.4</a></li>
+      <li><a class="reference external" href="../index/../../v3.0.3/index.html">v3.0.3</a></li>
+      <li><a class="reference external" href="../index/../../v3.0.2/index.html">v3.0.2</a></li>
+      <li><a class="reference external" href="../index/../../v3.0.1/index.html">v3.0.1</a></li>
+      <li><a class="reference external" href="../index/../../v3.0.0/index.html">v3.0.0</a></li>
+      <li><a class="reference external" href="../index/../../v2.0.0/index.html">v2.0.0</a></li>
+      <li><a class="reference external" href="../index/../../v1.3.2/index.html">v1.3.2</a></li>
+      <li><a class="reference external" href="../index/../../v1.2.10/index.html">v1.2.10</a></li>
+      
+    </ul>
+  </p>
+</p>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="core_type_erasure.html" title="Type erasures"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="nexus_utils.html" title="Utility functions and classes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">libpninexus 3.4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >API documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Data types and type management</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, DESY, Eugen Wintersberger.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>
