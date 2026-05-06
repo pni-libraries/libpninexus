@@ -39,19 +39,20 @@ keyring
 The return value of this command line should be `OK`.
 In a next step you have to add new package sources to your system. For this
 purpose go to :file:`/etc/apt/sources.list.d` and download the sources file.
-For Debian (Bookworm) use
+For Debian (Trixie) use
 
 .. code-block:: bash
 
-   $ wget http://repos.pni-hdri.de/bookworm-pni-hdri.list
+   $ wget http://repos.pni-hdri.de/trixie-pni-hdri.sources
 
-and for Ubuntu (Noble)
+and for Ubuntu (Resolute)
 
 .. code-block:: bash
 
-   $ wget http://repos.pni-hdri.de/noble-pni-hdri.list
+   $ wget http://repos.pni-hdri.de/resolute-pni-hdri.sources
 
-The packages are also available for Debian Bookworm, Bullseye, Buster and Ubuntu Oracular, Noble, Jammy.
+The packages are also available for Debian Trixie, Bookworm, Bullseye and Ubuntu Resolute, Noble, Jammy.
+For older releases the ATP source file has the .list extension.
 
 Once you have downloaded the file use
 
@@ -64,7 +65,7 @@ to update your package list and
 
 .. code-block:: bash
 
-   $ apt-get install libpninexus3.3.0 libpninexus3.3.0-dev libpninexus3.3.0-doc
+   $ apt-get install libpninexus3.4.0 libpninexus3.4.0-dev libpninexus3.4.0-doc
 
 to install the library. Dependencies will be resolved automatically so you can
 start with working right after the installation has finished.
@@ -121,7 +122,7 @@ or
 
 .. code-block:: bash
 
-   $ export H5CPP=/opt/pni/lib/cmake/h5cpp-0.7.1
+   $ export H5CPP=/opt/pni/lib/cmake/h5cpp-0.8.0
    $ cmake -Dh5cpp_DIR=$H5CPP -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/pni -DPNINEXUS_CONAN=DISABLE ../libpninexus
 
 if `h5cpp` is installed in the non-standard directory.

@@ -1,8 +1,10 @@
 FROM debian:buster
 
-MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
+RUN sed -i 's|http://deb.debian.org|http://archive.debian.org|g' /etc/apt/sources.list
+RUN sed -i 's|http://security.debian.org|http://archive.debian.org|g' /etc/apt/sources.list
+# MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
 
-RUN /bin/bash -c 'echo "deb http://ftp.de.debian.org/debian buster main" > /etc/apt/sources.list.d/debian9de.list'
+# RUN /bin/bash -c 'echo "deb http://ftp.de.debian.org/debian buster main" > /etc/apt/sources.list.d/debian9de.list'
 RUN apt-get update
 RUN apt-get install -y base-passwd apt-utils dialog -y
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
@@ -14,7 +16,7 @@ RUN apt-get -qq update && apt-get -qq -y dist-upgrade
 
 RUN apt-get -qq update && apt-get -qq -y install cmake g++ doxygen python3-sphinx git libboost-all-dev gfortran graphviz libcppunit-dev texlive doxygen pkg-config texlive-latex-extra texlive-latex-recommended texlive-pictures python3-pygments libhdf5-dev libgtest-dev lsb-release python3-breathe texlive-pictures python3-sphinx-rtd-theme libjs-mathjax fonts-mathjax fonts-mathjax-extras ghostscript
 RUN apt-get -qq update && apt-get -qq -y install libhdf5-dev
-RUN apt-get -qq update && apt-get -qq -y install libh5cpp0.7.1-dev libh5cpp0.7.1
+RUN apt-get -qq update && apt-get -qq -y install libh5cpp0.8.0-dev libh5cpp0.8.0
 RUN apt-get -qq update && apt-get -qq -y install hdf5-plugin-blosc hdf5-plugin-bshuf
 
 RUN apt-get clean

@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 project(pninexus
         LANGUAGES CXX C
         VERSION 3.3.0
-        # VERSION 3.2
+	# documentation for VERSION with one '.' is stored as v:latest (see doc/source/conf.py.in)
+        # VERSION 3.3
 	)
 include(CTest)
 
@@ -16,7 +17,7 @@ include(CTest)
 set(LIBRARY_VERSION ${PROJECT_VERSION})
 set(SO_VERSION ${PROJECT_VERSION})
 
-
+option(PNINEXUS_OLD_CMAKE "enable support for old cmake versions" OFF)
 
 #---------------------------------------------------------------------------------
 # Augment CMake with our custom scripts
@@ -24,6 +25,10 @@ set(SO_VERSION ${PROJECT_VERSION})
 set(EXTRA_MODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 list(APPEND CMAKE_MODULE_PATH ${EXTRA_MODULES_DIR})
 
+if (PNINEXUS_OLD_CMAKE)
+  set(EXTRA_OLDMODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake/old)
+  list(APPEND CMAKE_MODULE_PATH ${EXTRA_OLDMODULES_DIR})
+endif()
 
 if (NOT DEFINED BUILD_SHARED_LIBS)
   set(BUILD_SHARED_LIBS ON)
@@ -36,6 +41,7 @@ option(PNINEXUS_LOCAL_MODULES "Build pninexus using cmake local modules first")
 option(PNINEXUS_BUILD_EXAMPLES "Include the examples in the project" OFF)
 option(PNINEXUS_BUILD_DOC "build document" ON)
 option(PNINEXUS_USE_BOOST_FILESYSTEM "use boost filesystem library" OFF)
+option(PNINEXUS_TEST_LOG_IN_FILE "store test logs in files" OFF)
 
 
 set(PNINEXUS_CONAN "AUTO" CACHE STRING "conan options AUTO (conan must be in path), MANUAL (expects conanbuildinfo.cmake in build directory) or DISABLE")
@@ -104,16 +110,14 @@ endif()
 
 if(PNINEXUS_USE_BOOST_FILESYSTEM MATCHES ON)
   set(PNINEXUS_FILESYSTEM_LIB "boost_filesystem")
-  find_package(Boost 1.60 COMPONENTS system
-                                   regex
+  find_package(Boost 1.60 COMPONENTS regex
                                    date_time
                                    unit_test_framework
 				   filesystem
 				   REQUIRED)
 else()
   set(PNINEXUS_FILESYSTEM_LIB "stdc++fs")
-  find_package(Boost 1.60 COMPONENTS system
-                                   regex
+  find_package(Boost 1.60 COMPONENTS regex
                                    date_time
                                    unit_test_framework
 				   REQUIRED)

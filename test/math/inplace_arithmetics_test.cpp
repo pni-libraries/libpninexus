@@ -33,12 +33,13 @@
 #include <boost/current_function.hpp>
 #include <boost/math/special_functions/math_fwd.hpp>
 #include <pni/algorithms/math/inplace_arithmetics.hpp>
+#include <pni/types/types.hpp>
+#include <pni/types/traits.hpp>
 
 #include "array_types.hpp"
 #include <cmath>
 #include "number_ranges.hpp"
 #include "fixture.hpp"
-
 
 namespace std{
 
@@ -49,7 +50,7 @@ namespace std{
     {
 
         return isfinite(v.real()) && isfinite(v.imag());
-    }
+    }  
 }
 
 
@@ -225,11 +226,12 @@ BOOST_AUTO_TEST_SUITE(inplace_arithmetics_test)
                                     <<" at index "<<i<<" with type: "<<
                                     f.type_name);
             }
-            else
-            {
+            else if(!is_complex_type<value_type>::value)
+	    {
+	      
                 BOOST_CHECK_EQUAL(f.lhs[i],
                                   value_type(f.lhs_orig[i]*f.rhs_scalar));
-            }
+	    }
         }
     }
 
@@ -250,11 +252,67 @@ BOOST_AUTO_TEST_SUITE(inplace_arithmetics_test)
                                     <<" at index "<<i<<" with type: "<<
                                     f.type_name);
             }
-            else
-            {
+            else if(!is_complex_type<value_type>::value)
+	    {
                 BOOST_CHECK_EQUAL(f.lhs[i],
                                   value_type(f.lhs_orig[i]*f.rhs[i]));
+	      
+	    }
+        }
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(test_mult_cx_scalar,TestArrayT,all_array_cx_types)
+    {
+        typedef typename TestArrayT::value_type value_type;
+        fixture<TestArrayT> f((mult_ranges<value_type>()));
+
+        ip_type::mult(f.lhs,f.rhs_scalar);
+        
+        for(size_t i=0;i<f.lhs.size();++i)
+        {
+            if(!(std::is_integral<value_type>::value) &&  !(std::isfinite)(f.lhs[i]))
+            {
+                BOOST_TEST_MESSAGE( "Infinite result "<<f.lhs[i]<<" from "<<
+                                    f.lhs_orig[i]<<"*"<<f.rhs_scalar
+                                    <<" at index "<<i<<" with type: "<<
+                                    f.type_name);
             }
+            else
+	    {
+	      BOOST_CHECK_CLOSE(f.lhs[i].real(),
+				value_type(f.lhs_orig[i]*f.rhs_scalar).real(), 2.0e-03);
+	      BOOST_CHECK_CLOSE(f.lhs[i].imag(),
+				value_type(f.lhs_orig[i]*f.rhs_scalar).imag(), 2.0e-03);
+	    }
+        }
+    }
+
+    //========================================================================
+    BOOST_AUTO_TEST_CASE_TEMPLATE(test_mult_cx_array,TestArrayT,all_array_cx_types)
+    {
+        typedef typename TestArrayT::value_type value_type;
+        fixture<TestArrayT> f((mult_ranges<value_type>()));
+
+        ip_type::mult(f.lhs,f.rhs);
+
+        for(size_t i=0;i<f.lhs.size();++i)
+        {
+            if(!(std::is_integral<value_type>::value) &&  !(std::isfinite)(f.lhs[i]))
+            {
+                BOOST_TEST_MESSAGE( "Infinite result "<<f.lhs[i]<<" from "<<
+                                    f.lhs_orig[i]<<"*"<<f.rhs[i]
+                                    <<" at index "<<i<<" with type: "<<
+                                    f.type_name);
+            }
+            else
+	    {
+	      BOOST_CHECK_CLOSE(f.lhs[i].real(),
+				value_type(f.lhs_orig[i]*f.rhs[i]).real(), 2.0e-03);
+	      BOOST_CHECK_CLOSE(f.lhs[i].imag(),
+				value_type(f.lhs_orig[i]*f.rhs[i]).imag(), 2.0e-03);
+	      
+	    }
         }
     }
 
