@@ -111,6 +111,8 @@ BOOST_AUTO_TEST_CASE(construct_string)
 {
   xml::DatatypeBuilder builder(create_field_node("<field type=\"string\"/>"));
   BOOST_CHECK(builder.build() == hdf5::datatype::create<std::string>());
+  hdf5::datatype::String string_type(builder.build());
+  BOOST_CHECK(string_type.encoding()==hdf5::datatype::CharacterEncoding::UTF8);
 }
 
 BOOST_AUTO_TEST_CASE(construct_complex_fail)
