@@ -31,7 +31,8 @@ using namespace pni;
 
 struct ScalarAttributeFixture : public BuilderFixture
 {
-    hdf5::attribute::Attribute attribute;
+  hdf5::attribute::Attribute attribute;
+  hdf5::datatype::String string_type;
 
     ScalarAttributeFixture():
       BuilderFixture("ScalarAttributesTest.nxs","scalar_attribute_test.xml")
@@ -75,7 +76,7 @@ BOOST_AUTO_TEST_CASE(test_string_attribute)
   BOOST_CHECK(root_group.attributes.exists("string_attribute"));
   BOOST_CHECK_NO_THROW(attribute = root_group.attributes["string_attribute"]);
   BOOST_CHECK(attribute.datatype()==hdf5::datatype::create<std::string>());
-  hdf5::datatype::String string_type(attribute.datatype());
+  BOOST_CHECK_NO_THROW(string_type = attribute.datatype() );
   BOOST_CHECK(string_type.encoding()==hdf5::datatype::CharacterEncoding::UTF8);
   std::string data;
   attribute.read(data);
