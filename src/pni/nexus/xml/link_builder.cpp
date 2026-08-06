@@ -35,6 +35,9 @@ LinkBuilder::LinkBuilder(const Node &node):
 
 void LinkBuilder::build(const hdf5::node::Node &parent) const
 {
+  if (!(node.attributes.exists("target")))
+    return;
+
   hdf5::node::Group link_parent(parent);
   std::string link_name = node().attribute("name").str_data();
   pni::nexus::Path link_target(pni::nexus::Path::from_string(node().attribute("target").str_data()));
