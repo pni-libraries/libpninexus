@@ -78,8 +78,8 @@ hdf5::node::Group group_from_node(const hdf5::node::Group &parent,
       else if(strcmp(name, "name") == 0)
 	continue;
       
-      auto utf8_type = datatype::create<std::string>();
-      utf8_type.encoding(datatype::CharacterEncoding::UTF8);
+      auto utf8_type = hdf5::datatype::create<std::string>();
+      utf8_type.encoding(hdf5::datatype::CharacterEncoding::UTF8);
       
       group.attributes.create(name, utf8_type,
 			      hdf5::dataspace::Scalar()).write(v.second.data());
