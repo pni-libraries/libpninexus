@@ -35,7 +35,7 @@ LinkBuilder::LinkBuilder(const Node &node):
 
 void LinkBuilder::build(const hdf5::node::Node &parent) const
 {
-  if (!(node.attributes.exists("target")))
+  if (!(node().attributes.exists("target")))
     return;
 
   hdf5::node::Group link_parent(parent);
