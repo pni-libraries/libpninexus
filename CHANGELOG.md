@@ -1,6 +1,10 @@
 # ChangeLog
 
-## 3.4.0 - 2025-05-06
+## 3.5.0 - 2026-08-10
+- links without target skipped (https://github.com/pni-libraries/libpninexus/pull/278)
+- strings in xml builder changed to utf8 (https://github.com/pni-libraries/libpninexus/pull/279)
+
+## 3.4.0 - 2026-05-06
 - add PNINEXUS_OLD_CMAKE switch  (https://github.com/pni-libraries/libpninexus/pull/271)
 - change tolerance in tests  (https://github.com/pni-libraries/libpninexus/pull/269)
 - compare complex number with BOOST_CHECK_CLOSE (https://github.com/pni-libraries/libpninexus/pull/268)
@@ -12,7 +16,7 @@
 - remove windows-2019 tests   (https://github.com/pni-libraries/libpninexus/pull/256)
 - technical release for h5cpp 0.8.0 (https://github.com/ess-dmsc/h5cpp/issues/698)
 
-## 3.3.0 - 2025-05-06
+## 3.3.0 - 2025-05-08
 - technical release for h5cpp 0.7.0 (https://github.com/ess-dmsc/h5cpp/issues/670)
 
 ## 3.2.0 - 2023-10-11
