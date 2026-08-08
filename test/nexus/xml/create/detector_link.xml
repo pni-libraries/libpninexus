@@ -32,5 +32,6 @@
     </group>
     <group type="NXdata" name="data">
         <link target="/entry/instrument/detector/data" name="data"/>
+        <link name="notargetdata"/>
     </group>
 </group>

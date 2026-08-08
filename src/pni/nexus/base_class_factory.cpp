@@ -46,6 +46,7 @@ hdf5::node::Group BaseClassFactory::create(const hdf5::node::Group &parent,
   hdf5::node::Group base_class(parent,path,lcpl,gcpl,gapl);
 
   auto type = hdf5::datatype::create<std::string>();
+  type.encoding(hdf5::datatype::CharacterEncoding::UTF8);
   hdf5::dataspace::Scalar space;
   base_class.attributes.create("NX_class",type,space).write(class_name);
 

@@ -47,7 +47,12 @@ hdf5::datatype::Datatype DatatypeFactory::create(pni::type_id_t tid)
     case type_id_t::Float32: return hdf5::datatype::create<float32>();
     case type_id_t::Float64: return hdf5::datatype::create<float64>();
     case type_id_t::Float128: return hdf5::datatype::create<float128>();
-    case type_id_t::String: return hdf5::datatype::create<std::string>();
+    case type_id_t::String:
+      {
+	auto utf8_type = hdf5::datatype::create<std::string>();
+	utf8_type.encoding(hdf5::datatype::CharacterEncoding::UTF8);
+	return utf8_type;
+      }
     case type_id_t::EBool: return hdf5::datatype::create<hdf5::datatype::EBool>();
     default:
     {

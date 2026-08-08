@@ -65,7 +65,7 @@ to update your package list and
 
 .. code-block:: bash
 
-   $ apt-get install libpninexus3.4.0 libpninexus3.4.0-dev libpninexus3.4.0-doc
+   $ apt-get install libpninexus3.5.0 libpninexus3.5.0-dev libpninexus3.5.0-doc
 
 to install the library. Dependencies will be resolved automatically so you can
 start with working right after the installation has finished.

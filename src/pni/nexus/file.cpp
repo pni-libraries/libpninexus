@@ -43,7 +43,8 @@ void write_nexus_file_attribute(const node::Group &root_group,
                                 const std::string &attribute_name,
                                 const std::string &attribute_value)
 {
-  auto type = datatype::create<std::string>();
+  auto type = hdf5::datatype::create<std::string>();
+  type.encoding(hdf5::datatype::CharacterEncoding::UTF8);
   dataspace::Scalar space;
 
   root_group.attributes.create(attribute_name,type,space).write(attribute_value);
