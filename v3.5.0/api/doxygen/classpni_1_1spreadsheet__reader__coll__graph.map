@@ -1,0 +1,28 @@
+<map id="pni::spreadsheet_reader" name="pni::spreadsheet_reader">
+<area shape="rect" id="Node000001" title="base class for spreadsheet reader" alt="" coords="99,627,278,652"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1data__reader.html" title="base class for data readers" alt="" coords="215,531,343,557"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,571,247,605,214,629,211,624,243,601,266,568"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="188,333,275,359"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="238,371,257,461,278,530,273,532,251,462,233,373"/>
+<area shape="rect" id="Node000012" href="$classpni_1_1column__info.html" title="Spreadsheet column information." alt="" coords="34,429,165,454"/>
+<area shape="poly" id="edge12_Node000012_Node000003" title=" " alt="" coords="199,368,172,385,114,430,111,426,168,380,196,363"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="162,244,301,284"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="234,298,234,333,229,333,229,298"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="319,421,474,461"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="366,472,295,533,291,529,363,468"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="344,333,449,359"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="399,372,399,421,394,421,394,372"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="325,244,471,284"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="400,298,400,333,394,333,395,298"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="327,155,469,195"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="401,209,401,244,395,244,395,209"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="313,80,483,105"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="401,119,401,155,395,155,395,119"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="345,5,451,31"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="401,45,401,80,395,80,395,45"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="8,524,191,564"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="124,573,148,601,175,625,172,629,144,605,120,577"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="102,468,102,524,97,524,97,468"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="5,333,164,359"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="88,372,90,397,98,428,93,429,85,398,82,373"/>
+</map>

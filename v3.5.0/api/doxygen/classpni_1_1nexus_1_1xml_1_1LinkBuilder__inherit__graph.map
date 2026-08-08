@@ -1,0 +1,7 @@
+<map id="pni::nexus::xml::LinkBuilder" name="pni::nexus::xml::LinkBuilder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="13,152,216,177"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1nexus_1_1xml_1_1ObjectBuilder.html" title=" " alt="" coords="5,79,224,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,118,117,152,112,152,112,118"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1nexus_1_1ObjectBuilder.html" title="a simple object builder interface" alt="" coords="22,5,207,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,44,117,79,112,79,112,44"/>
+</map>

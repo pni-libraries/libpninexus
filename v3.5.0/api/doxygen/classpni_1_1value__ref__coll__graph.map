@@ -1,0 +1,7 @@
+<map id="pni::value_ref" name="pni::value_ref">
+<area shape="rect" id="Node000001" title="type erasure for references to POD data" alt="" coords="49,196,160,221"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="19,93,190,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,147,107,196,102,196,102,147"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1value__holder__interface.html" title="abstract interface for data holder" alt="" coords="5,5,204,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,44,107,93,102,93,102,44"/>
+</map>
