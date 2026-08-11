@@ -78,7 +78,7 @@ namespace pni{
     PNINEXUS_CREATE_TYPE_CLASS_MAP(bool_t,type_class_t::Bool);
     PNINEXUS_CREATE_TYPE_CLASS_MAP(binary,type_class_t::Binary);
     PNINEXUS_CREATE_TYPE_CLASS_MAP(string,type_class_t::String);
-    PNINEXUS_CREATE_TYPE_CLASS_MAP(ascii,type_class_t::ASCII);
+    // PNINEXUS_CREATE_TYPE_CLASS_MAP(ascii,type_class_t::ASCII);
 
     PNINEXUS_CREATE_TYPE_CLASS_MAP(none,type_class_t::None);
 
