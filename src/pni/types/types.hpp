@@ -73,7 +73,8 @@ namespace pni{
     typedef std::complex<float128> complex128; 
 
     //-----------------------utility types-------------------------------------
-    typedef std::string     string; //!< String type
+    typedef std::string     string; //!< UFT8 String type
+    typedef std::string     ascii; //!< ASCII String type
     typedef binary_t<uint8> binary; //!< data type for binary data
     /*! @} */
 

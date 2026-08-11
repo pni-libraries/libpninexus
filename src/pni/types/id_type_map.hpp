@@ -84,6 +84,7 @@ namespace pni{
     PNINEXUS_CREATE_ID_TYPE_MAP(type_id_t::Binary,binary);
     PNINEXUS_CREATE_ID_TYPE_MAP(type_id_t::Bool,bool_t);
     PNINEXUS_CREATE_ID_TYPE_MAP(type_id_t::EBool,hdf5::datatype::EBool);
+    PNINEXUS_CREATE_ID_TYPE_MAP(type_id_t::ASCII,ascii);
     PNINEXUS_CREATE_ID_TYPE_MAP(type_id_t::None,none);
     //! \endcond NO_API_DOC
 

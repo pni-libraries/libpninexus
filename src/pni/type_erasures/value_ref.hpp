@@ -271,6 +271,7 @@ namespace pni{
             case type_id_t::Complex128: return _get<ReturnT,complex128>();
             case type_id_t::Binary:     return _get<ReturnT,binary>();
             case type_id_t::String:     return _get<ReturnT,string>();
+            case type_id_t::ASCII:      return _get<ReturnT,ascii>();
             case type_id_t::Bool:       return _get<ReturnT,bool_t>();
             case type_id_t::EBool:       return _get<ReturnT,hdf5::datatype::EBool>();
             default:
@@ -305,6 +306,7 @@ namespace pni{
             case type_id_t::Complex128: _set<complex128>(v); break;
             case type_id_t::Binary:     _set<binary>(v);     break;
             case type_id_t::String:     _set<string>(v);     break;
+            case type_id_t::ASCII:      _set<ascii>(v);      break;
             case type_id_t::Bool:       _set<bool_t>(v);     break;
             case type_id_t::EBool:      _set<hdf5::datatype::EBool>(v);     break;
             default:

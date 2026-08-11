@@ -45,6 +45,7 @@ namespace pni{
 	    if(tid==type_id_t::Complex64) {o<<"COMPLEX64"; return o;}
 	    if(tid==type_id_t::Complex128) {o<<"COMPLEX128"; return o;}
 	    if(tid==type_id_t::String) {o<<"STRING"; return o;}
+	    if(tid==type_id_t::ASCII) {o<<"ASCII"; return o;}
 	    if(tid==type_id_t::Binary) {o<<"BINARY"; return o;}
 	    if(tid==type_id_t::Bool) {o<<"BOOL"; return o;}
 
