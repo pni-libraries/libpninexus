@@ -1,5 +1,8 @@
 # ChangeLog
 
+## 3.5.1 - 2026-08-11
+- field attributes in xml builder changed to utf8 (https://github.com/pni-libraries/libpninexus/pull/283)
+
 ## 3.5.0 - 2026-08-10
 - links without target skipped (https://github.com/pni-libraries/libpninexus/pull/278)
 - strings in xml builder changed to utf8 (https://github.com/pni-libraries/libpninexus/pull/279)
