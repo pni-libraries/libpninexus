@@ -168,7 +168,8 @@ namespace pni{
                           Complex32,  //!< 32Bit IEEE floating point complex
                           Complex64,  //!< 64Bit IEEE floating point complex
                           Complex128, //!< 128Bit IEEE floating point complex
-                          String,     //!< String type
+                          String,     //!< UTF8 String type
+                          ASCII,      //!< ASCII String type
                           Binary,     //!< binary data
                           Bool,        //!< integer boolean data
                           EBool        //!< enum boolean data
