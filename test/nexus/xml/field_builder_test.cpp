@@ -146,6 +146,18 @@ BOOST_AUTO_TEST_CASE(test_scalar_fields)
   dataset.read(sdata);
   BOOST_CHECK(sdata == std::string("hello"));
 
+  BOOST_CHECK(dataset.attributes.exists("type"));
+  BOOST_CHECK_NO_THROW(attribute = dataset.attributes["type"]);
+  BOOST_CHECK(attribute.datatype()==hdf5::datatype::create<std::string>());
+  BOOST_CHECK_NO_THROW(string_type = attribute.datatype() );
+  BOOST_CHECK(string_type.encoding()==hdf5::datatype::CharacterEncoding::UTF8);
+
+  std::string adata;
+  attribute.read(adata);
+  BOOST_CHECK(adata == "string");
+  auto adataspace = attribute.dataspace();
+  BOOST_CHECK(adataspace.type() == hdf5::dataspace::Type::Scalar);
+
   dataset = hdf5::node::get_node(root_group,"/scalar_fields/bool_field");
   BOOST_CHECK(nexus::get_type_id(dataset) == type_id_t::EBool);
   dataspace = dataset.dataspace();
