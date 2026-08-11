@@ -39,6 +39,8 @@ struct FieldBuilderFixture
     hdf5::dataspace::Dataspace dataspace;
     hdf5::datatype::Datatype datatype;
     hdf5::property::DatasetCreationList dcpl;
+    hdf5::attribute::Attribute attr;
+    hdf5::datatype::String string_type;
 
     FieldBuilderFixture()
     {
