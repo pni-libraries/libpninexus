@@ -92,8 +92,8 @@ BOOST_AUTO_TEST_CASE(test_string_attribute)
   std::string data2;
   attribute.read(data2);
   BOOST_CHECK(data2 == "hi");
-  auto dataspace = attribute.dataspace();
-  BOOST_CHECK(dataspace.type() == hdf5::dataspace::Type::Scalar);
+  auto dataspace2 = attribute.dataspace();
+  BOOST_CHECK(dataspace2.type() == hdf5::dataspace::Type::Scalar);
 }
 
 BOOST_AUTO_TEST_CASE(test_bool_attribute)
