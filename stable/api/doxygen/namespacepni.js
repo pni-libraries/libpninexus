@@ -143,6 +143,7 @@ var namespacepni =
     [ "view_provider", "structpni_1_1view__provider.html", null ],
     [ "view_provider< ArrayT, false >", "structpni_1_1view__provider_3_01ArrayT_00_01false_01_4.html", "structpni_1_1view__provider_3_01ArrayT_00_01false_01_4" ],
     [ "view_provider< ArrayT, true >", "structpni_1_1view__provider_3_01ArrayT_00_01true_01_4.html", "structpni_1_1view__provider_3_01ArrayT_00_01true_01_4" ],
+    [ "ascii", "group__type__classes.html#ga90eaee285ba4e0022d27d12e58e2b120", null ],
     [ "binary", "group__type__classes.html#gab80fde605a35ad90da1651d7d3c67893", null ],
     [ "checked_type_vectors", "namespacepni.html#a471ed8f87fcfdf66db099a21b5e6d7cc", null ],
     [ "complex128", "group__type__classes.html#ga93af677cfc058639b20efe51e82b0226", null ],
@@ -215,6 +216,7 @@ var namespacepni =
       [ "Complex64", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdad966dd0f6dc22b834b636fb9df4b756a", null ],
       [ "Complex128", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdaee63a91375f038924d9671f9fec7059b", null ],
       [ "String", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cda27118326006d3829667a400ad23d5d98", null ],
+      [ "ASCII", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdad2cd8253361a9c732d21ca1d336599cc", null ],
       [ "Binary", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cda6ce976e8f061b2b5cfe4d0c50c3405dd", null ],
       [ "Bool", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdac26f15e86e3de4c398a8273272aba034", null ],
       [ "EBool", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdae9ea9a7e4f8a765f1765d6f7a2ea187e", null ]

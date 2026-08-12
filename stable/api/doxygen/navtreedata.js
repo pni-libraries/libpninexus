@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "PNI NeXus Library", "index.html", [
-    [ "PNI NeXus Library 3.5.0 Documentation", "index.html", "index" ],
+    [ "PNI NeXus Library 3.6.0 Documentation", "index.html", "index" ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -75,10 +75,10 @@ var NAVTREEINDEX =
 "classpni_1_1spreadsheet__reader.html#ab62401710186b765810fc6f215a5f56d",
 "classpni_1_1tiff__reader.html#a195a5c14d8d2112c8888d90c9c8612c1",
 "div__op_8hpp_source.html",
-"math_8hpp_source.html",
-"namespacepni_1_1nexus.html#a8797fbc7b7eccda61c91432c6404776a",
-"structpni_1_1array__trait.html",
-"structpni_1_1is__view__cont_3_01std_1_1array_3_01ElementT_00_01TDimN_01_4_01_4.html"
+"make__relative_8hpp_source.html",
+"namespacepni_1_1nexus.html#a745e27e7d0d691b5b043c3ac59f716b4",
+"structpni_1_1array__iterator__types_3_011_01_4.html#ae404b0625149d6e4e08a36680a8353e9",
+"structpni_1_1is__view__cont.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
