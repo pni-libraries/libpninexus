@@ -117,8 +117,13 @@ void FieldBuilder::build(const hdf5::node::Node &parent) const
     auto name =  v.first.data();
     if(strcmp(name, "name") == 0)
       continue;
-    dataset.attributes.create<std::string>(name)
-        .write(node().attribute(name).str_data());
+
+    auto utf8_type = hdf5::datatype::create<std::string>();
+    utf8_type.encoding(hdf5::datatype::CharacterEncoding::UTF8);
+
+    dataset.attributes.create(name, utf8_type,
+			      hdf5::dataspace::Scalar())
+      .write(node().attribute(name).str_data());
   }
 
   //need to handle data if available

@@ -232,6 +232,8 @@ namespace pni{
                 return format(v.as<hdf5::datatype::EBool>());
             case type_id_t::String:
                 return format(v.as<string>());
+            case type_id_t::ASCII:
+                return format(v.as<string>());
             default:
                 return "";
         }

@@ -57,6 +57,7 @@ namespace pni{
      {"complex128",type_id_t::Complex128},{"c128",type_id_t::Complex128},{"NX_COMPLEX128",type_id_t::Complex128},
      {"string",type_id_t::String},{"str",type_id_t::String},{"NX_CHAR",type_id_t::String},
      {"binary",type_id_t::Binary}, {"bool",type_id_t::EBool},{"NX_BOOLEAN",type_id_t::EBool},
+     {"ascii",type_id_t::ASCII},
      {"ibool",type_id_t::Bool},
      {"ebool",type_id_t::EBool},
      {"none",type_id_t::None}
@@ -85,6 +86,7 @@ namespace pni{
      {type_id_t::Binary,"binary"},
      {type_id_t::Bool,"ibool"},
      {type_id_t::EBool,"bool"},
+     {type_id_t::ASCII,"ascii"},
      // {type_id_t::EBool,"ebool"},
      {type_id_t::None,"none"}
     };

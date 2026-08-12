@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 project(pninexus
         LANGUAGES CXX C
-        VERSION 3.5.0
+        VERSION 3.6.0
 	# documentation for VERSION with one '.' is stored as v:latest (see doc/source/conf.py.in)
-        # VERSION 3.5
+        # VERSION 3.6
 	)
 include(CTest)
 

@@ -96,6 +96,7 @@ namespace pni{
             case type_id_t::Complex64:  *this = v.as<complex64>();  break;
             case type_id_t::Complex128: *this = v.as<complex128>(); break;
             case type_id_t::String:     *this = v.as<string>();     break;
+            case type_id_t::ASCII:      *this = v.as<ascii>();      break;
             case type_id_t::Bool:       *this = v.as<bool_t>();     break;
             case type_id_t::EBool:       *this = v.as<hdf5::datatype::EBool>();     break;
             case type_id_t::Binary:     *this = v.as<binary>();     break;
@@ -144,6 +145,7 @@ namespace pni{
             case type_id_t::Complex64:  return value(v.as<complex64>());
             case type_id_t::Complex128: return value(v.as<complex128>());
             case type_id_t::String:     return value(v.as<string>());
+            case type_id_t::ASCII:      return value(v.as<ascii>());
             case type_id_t::Bool:       return value(v.as<bool_t>());
             case type_id_t::EBool:       return value(v.as<hdf5::datatype::EBool>());
             default: 

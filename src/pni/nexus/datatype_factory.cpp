@@ -53,6 +53,7 @@ hdf5::datatype::Datatype DatatypeFactory::create(pni::type_id_t tid)
 	utf8_type.encoding(hdf5::datatype::CharacterEncoding::UTF8);
 	return utf8_type;
       }
+    case type_id_t::ASCII: return hdf5::datatype::create<std::string>();
     case type_id_t::EBool: return hdf5::datatype::create<hdf5::datatype::EBool>();
     default:
     {

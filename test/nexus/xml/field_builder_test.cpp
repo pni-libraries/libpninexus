@@ -39,6 +39,8 @@ struct FieldBuilderFixture
     hdf5::dataspace::Dataspace dataspace;
     hdf5::datatype::Datatype datatype;
     hdf5::property::DatasetCreationList dcpl;
+    hdf5::attribute::Attribute attr;
+    hdf5::datatype::String string_type;
 
     FieldBuilderFixture()
     {
@@ -145,6 +147,18 @@ BOOST_AUTO_TEST_CASE(test_scalar_fields)
   std::string sdata;
   dataset.read(sdata);
   BOOST_CHECK(sdata == std::string("hello"));
+
+  BOOST_CHECK(dataset.attributes.exists("type"));
+  BOOST_CHECK_NO_THROW(attr = dataset.attributes["type"]);
+  BOOST_CHECK(attr.datatype()==hdf5::datatype::create<std::string>());
+  BOOST_CHECK_NO_THROW(string_type = attr.datatype() );
+  BOOST_CHECK(string_type.encoding()==hdf5::datatype::CharacterEncoding::UTF8);
+
+  std::string adata;
+  attr.read(adata);
+  BOOST_CHECK(adata == "string");
+  auto adataspace = attr.dataspace();
+  BOOST_CHECK(adataspace.type() == hdf5::dataspace::Type::Scalar);
 
   dataset = hdf5::node::get_node(root_group,"/scalar_fields/bool_field");
   BOOST_CHECK(nexus::get_type_id(dataset) == type_id_t::EBool);

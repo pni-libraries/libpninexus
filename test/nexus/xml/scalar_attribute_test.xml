@@ -10,6 +10,9 @@
 	<attribute name="string_attribute" type="string">
 		hello
 	</attribute>
+	<attribute name="ascii_attribute" type="ascii">
+		hi
+	</attribute>
 	<attribute name="bool_attribute" type="bool">
           TRUE
 	</attribute>

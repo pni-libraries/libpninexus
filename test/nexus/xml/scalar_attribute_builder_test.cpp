@@ -83,6 +83,17 @@ BOOST_AUTO_TEST_CASE(test_string_attribute)
   BOOST_CHECK(data == "hello");
   auto dataspace = attribute.dataspace();
   BOOST_CHECK(dataspace.type() == hdf5::dataspace::Type::Scalar);
+
+  BOOST_CHECK(root_group.attributes.exists("ascii_attribute"));
+  BOOST_CHECK_NO_THROW(attribute = root_group.attributes["ascii_attribute"]);
+  BOOST_CHECK(attribute.datatype()==hdf5::datatype::create<std::string>());
+  BOOST_CHECK_NO_THROW(string_type = attribute.datatype() );
+  BOOST_CHECK(string_type.encoding()==hdf5::datatype::CharacterEncoding::ASCII);
+  std::string data2;
+  attribute.read(data2);
+  BOOST_CHECK(data2 == "hi");
+  auto dataspace2 = attribute.dataspace();
+  BOOST_CHECK(dataspace2.type() == hdf5::dataspace::Type::Scalar);
 }
 
 BOOST_AUTO_TEST_CASE(test_bool_attribute)

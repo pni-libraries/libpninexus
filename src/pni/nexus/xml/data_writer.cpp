@@ -88,6 +88,7 @@ void write_data(const Node &node,const ObjectT &object)
     case type_id_t::Float64: write_data<float64>(data,object); break;
     case type_id_t::Float128: write_data<float128>(data,object); break;
     case type_id_t::String:   write_string_data(data,object); break;
+    case type_id_t::ASCII:   write_string_data(data,object); break;
     case type_id_t::EBool:   write_bool_data(data,object); break;
     default:
     {

@@ -210,6 +210,7 @@ namespace pni{
             case type_id_t::Complex64:  return _get<TargetT,complex64>();
             case type_id_t::Complex128: return _get<TargetT,complex128>(); 
             case type_id_t::String:     return _get<TargetT,string>();
+            case type_id_t::ASCII:      return _get<TargetT,ascii>();
             case type_id_t::Binary:     return _get<TargetT,binary>();
             case type_id_t::Bool:       return _get<TargetT,bool_t>();
             case type_id_t::EBool:      return _get<TargetT,hdf5::datatype::EBool>();
@@ -244,6 +245,7 @@ namespace pni{
             case type_id_t::Bool:       _set<bool_t>(v);     break;
             case type_id_t::EBool:      _set<hdf5::datatype::EBool>(v);     break;
             case type_id_t::String:     _set<string>(v);     break;
+            case type_id_t::ASCII:      _set<ascii>(v);     break;
             default:
                 throw type_error(PNINEXUS_EXCEPTION_RECORD,
                         "Value is of unkonw type!");
