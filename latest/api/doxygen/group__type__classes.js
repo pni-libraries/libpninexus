@@ -122,6 +122,7 @@ var group__type__classes =
       [ "operator()", "classpni_1_1type__id__container__builder.html#aad4b9a68251ea6a469dc594bb309b1b5", null ],
       [ "_container", "classpni_1_1type__id__container__builder.html#a4276f5d3b85cea95bcd6a29118daf1a1", null ]
     ] ],
+    [ "pni::ascii", "group__type__classes.html#ga90eaee285ba4e0022d27d12e58e2b120", null ],
     [ "pni::binary", "group__type__classes.html#gab80fde605a35ad90da1651d7d3c67893", null ],
     [ "pni::complex128", "group__type__classes.html#ga93af677cfc058639b20efe51e82b0226", null ],
     [ "pni::complex32", "group__type__classes.html#gaf4f3e309490ff7ed71029d40375c5e46", null ],
@@ -170,6 +171,7 @@ var group__type__classes =
       [ "pni::type_id_t::Complex64", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdad966dd0f6dc22b834b636fb9df4b756a", null ],
       [ "pni::type_id_t::Complex128", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdaee63a91375f038924d9671f9fec7059b", null ],
       [ "pni::type_id_t::String", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cda27118326006d3829667a400ad23d5d98", null ],
+      [ "pni::type_id_t::ASCII", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdad2cd8253361a9c732d21ca1d336599cc", null ],
       [ "pni::type_id_t::Binary", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cda6ce976e8f061b2b5cfe4d0c50c3405dd", null ],
       [ "pni::type_id_t::Bool", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdac26f15e86e3de4c398a8273272aba034", null ],
       [ "pni::type_id_t::EBool", "group__type__classes.html#gga2c8ca0de37c42914554a1a9e500b31cdae9ea9a7e4f8a765f1765d6f7a2ea187e", null ]
