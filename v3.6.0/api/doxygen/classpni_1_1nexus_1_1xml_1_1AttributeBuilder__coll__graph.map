@@ -1,0 +1,20 @@
+<map id="pni::nexus::xml::AttributeBuilder" name="pni::nexus::xml::AttributeBuilder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="916,97,1103,137"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1nexus_1_1xml_1_1ObjectBuilder.html" title=" " alt="" coords="519,9,737,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="734,34,812,49,893,69,963,94,961,99,891,74,811,54,733,40"/>
+<area shape="rect" id="Node000003" href="$classpni_1_1nexus_1_1ObjectBuilder.html" title="a simple object builder interface" alt="" coords="209,5,395,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,17,518,18,518,23,408,22"/>
+<area shape="rect" id="Node000004" href="$classpni_1_1nexus_1_1xml_1_1Node.html" title="alias for ptree" alt="" coords="220,108,384,133"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="349,101,518,45,567,32,568,37,519,50,351,106"/>
+<area shape="rect" id="Node000006" href="$classpni_1_1nexus_1_1xml_1_1DatatypeBuilder.html" title="builds datatypes from XML nodes" alt="" coords="533,59,723,99"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="397,106,494,94,532,89,533,94,495,99,398,112"/>
+<area shape="rect" id="Node000007" href="$classpni_1_1nexus_1_1xml_1_1DataspaceBuilder.html" title=" " alt="" coords="529,123,727,163"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="375,133,419,139,529,144,529,149,418,145,374,138"/>
+<area shape="rect" id="Node000008" href="$classpni_1_1nexus_1_1xml_1_1DataWriter.html" title=" " alt="" coords="527,188,729,213"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="346,136,419,162,531,185,529,191,418,167,344,141"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,101,160,141"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,118,220,118,220,123,174,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="737,87,916,105,915,110,736,93"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="741,136,892,126,915,124,916,129,892,131,742,141"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="742,183,816,171,891,154,955,134,956,139,893,159,817,176,743,189"/>
+</map>

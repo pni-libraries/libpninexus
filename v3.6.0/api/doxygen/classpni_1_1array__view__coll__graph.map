@@ -1,0 +1,11 @@
+<map id="pni::array_view&lt; ArrayT &gt;" name="pni::array_view&lt; ArrayT &gt;">
+<area shape="rect" id="Node000001" title="provides a view on a part of an array" alt="" coords="644,49,839,74"/>
+<area shape="rect" id="Node000002" href="$classpni_1_1array__selection.html" title="selection from a multidimensional array" alt="" coords="321,49,471,74"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,59,644,59,644,64,485,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,51,164,77"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="118,43,151,28,187,16,215,14,243,16,432,22,620,39,672,46,671,51,620,44,432,27,243,21,215,19,189,21,153,32,120,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,61,243,60,320,59,320,65,243,65,178,66"/>
+<area shape="rect" id="Node000004" href="$classpni_1_1index__map.html" title=" " alt="" coords="267,98,525,153"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="164,77,267,97,266,102,163,82"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="538,96,672,71,673,77,539,102"/>
+</map>

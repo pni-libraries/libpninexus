@@ -1,0 +1,9 @@
+<map id="pni::nexus::Path" name="pni::nexus::Path">
+<area shape="rect" id="Node000001" title="Nexus path class." alt="" coords="84,197,209,223"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,95,118,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,134,74,153,81,172,94,185,110,195,107,200,90,189,76,175,69,155,68,134"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,144,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,59,77,94,72,94,72,59"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="143,95,297,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,134,193,175,166,199,163,195,189,172,210,132"/>
+</map>

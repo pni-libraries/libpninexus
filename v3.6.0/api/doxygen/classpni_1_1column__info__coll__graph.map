@@ -1,0 +1,9 @@
+<map id="pni::column_info" name="pni::column_info">
+<area shape="rect" id="Node000001" title="Spreadsheet column information." alt="" coords="116,183,247,208"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,95,118,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,127,169,180,165,184,98,131"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,144,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,59,77,94,72,94,72,59"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="142,95,301,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,134,189,183,184,181,208,131"/>
+</map>
