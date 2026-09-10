@@ -110,17 +110,17 @@ endif()
 
 if(PNINEXUS_USE_BOOST_FILESYSTEM MATCHES ON)
   set(PNINEXUS_FILESYSTEM_LIB "boost_filesystem")
-  find_package(Boost 1.60 COMPONENTS regex
+  find_package(Boost 1.70 COMPONENTS regex
                                    date_time
                                    unit_test_framework
 				   filesystem
-				   REQUIRED)
+				   CONFIG REQUIRED)
 else()
   set(PNINEXUS_FILESYSTEM_LIB "stdc++fs")
-  find_package(Boost 1.60 COMPONENTS regex
+  find_package(Boost 1.70 COMPONENTS regex
                                    date_time
                                    unit_test_framework
-				   REQUIRED)
+				   CONFIG REQUIRED)
 endif()
 
 if(PNINEXUS_BUILD_SHARED)
