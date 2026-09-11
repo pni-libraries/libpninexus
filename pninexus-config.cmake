@@ -21,7 +21,7 @@ if(NOT TARGET Boost::date_time)
 endif()
 
 message(STATUS "Required Boost components: ${BOOST_COMPONENTS}")
-find_package(Boost @Boost_MAJOR_VERSION@.@Boost_MINOR_VERSION@.@Boost_SUBMINOR_VERSION@ REQUIRED COMPONENTS ${BOOST_COMPONENTS})
+find_package(Boost @Boost_MAJOR_VERSION@.@Boost_MINOR_VERSION@.@Boost_SUBMINOR_VERSION@ CONFIG REQUIRED COMPONENTS ${BOOST_COMPONENTS})
 if(NOT Boost_FOUND)
 	message(FATAL_ERROR "Could not find boost libraries - you may have to set the BOOST_ROOT variable!")
 endif()

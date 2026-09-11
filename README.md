@@ -24,7 +24,7 @@ are requiered sdfdsf
 `libpninexus` requires certain library dependencies to be installed on the
 build system
 
-* Boost (>=1.60)
+* Boost (>=1.70)
 * [h5cpp](https://github.com/ess-dmsc/h5cpp) (>=0.5.0) -- from https://ess-dmsc.github.io/h5cpp/
 
 and their transitive dependencies. If all dependencies are available on your

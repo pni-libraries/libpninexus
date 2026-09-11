@@ -86,7 +86,7 @@ For a successful build some requirements must be satisfied
 * `h5cpp` >= 0.5.0
 * `gcc` >= 4.7 -- since version 1.0.0 `libpninexus` requires a mostly C++11
    compliant compiler. For the gcc familiy this is 4.7 and upwards
-* `BOOST` >= 1.60
+* `BOOST` >= 1.70
 * `doxygen` \cite{web:doxygen} -- used to build the API documentation
 * `cmake` \cite{web:cmake} $>=$ 3.10 -- the build software used by the `libpninexus`
 * `pkg-config` \cite{web:pkgconfig} -- program to manage libraries
