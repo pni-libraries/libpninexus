@@ -2,7 +2,17 @@ FROM debian:bullseye
 
 # MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
 
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list
+RUN sed -i 's/security.debian.org/archive.debian.org/g' /etc/apt/sources.list
+RUN sed -i '/security/d' /etc/apt/sources.list
+
 # RUN /bin/bash -c 'echo "deb http://ftp.de.debian.org/debian bullseye main" > /etc/apt/sources.list.d/debian9de.list'
+
+RUN  rm -rf /var/lib/apt/lists/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* && apt-get update && apt-get install -y perl-base=5.32.1-4+deb11u3 perl --reinstall   --allow-downgrades
+
 RUN apt-get update
 RUN apt-get install -y base-passwd apt-utils dialog -y
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections

@@ -19,12 +19,12 @@ jobs:
 
     strategy:
       matrix:
-        os: [debian13, debian12, ubuntu26.04, ubuntu24.04, ubuntu22.04]
+        os: [debian13, debian12, debian11, ubuntu26.04, ubuntu24.04, ubuntu22.04]
         buildtype: [Debug, Release]
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
 
       - name: Build the docker
         env:
@@ -137,7 +137,7 @@ jobs:
     #   image: ${{ matrix.image }}
     #   options: '--user=root'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set environment variables
         run: |
             bash .github/workflows/set_env_vars.sh \
@@ -201,7 +201,7 @@ jobs:
       - name: check cmake
         run: |
             cmake --version
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Add MSVC to PATH
         uses: ilammy/msvc-dev-cmd@v1
       - name: Set environment variables
@@ -267,8 +267,8 @@ jobs:
     #   image: ${{ matrix.image }}
     #   options: '--user=root'
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
       - name: Set environment variables
