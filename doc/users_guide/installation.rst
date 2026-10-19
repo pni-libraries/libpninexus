@@ -51,7 +51,7 @@ and for Ubuntu (Resolute)
 
    $ wget http://repos.pni-hdri.de/resolute-pni-hdri.sources
 
-The packages are also available for Debian Trixie, Bookworm, Bullseye and Ubuntu Resolute, Noble, Jammy.
+The packages are also available for Debian Trixie, Bookworm, Bullseye and Ubuntu Stonking, Resolute, Noble.
 For older releases the ATP source file has the .list extension.
 
 Once you have downloaded the file use
