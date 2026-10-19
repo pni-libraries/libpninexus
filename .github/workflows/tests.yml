@@ -132,7 +132,7 @@ jobs:
              clang14-libc++,
              clang14-libstdc++
         ]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     # container:
     #   image: ${{ matrix.image }}
     #   options: '--user=root'
