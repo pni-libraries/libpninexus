@@ -1,5 +1,8 @@
 # ChangeLog
 
+## 3.X.Y - 2026-XX-YY
+- add ubuntu 26.10 tests (https://github.com/pni-libraries/libpninexus/pull/292)
+
 ## 3.6.0 - 2026-08-11
 - field attributes in xml builder changed to utf8 (https://github.com/pni-libraries/libpninexus/pull/283)
 - add ASCII type to xml builder8 (https://github.com/pni-libraries/libpninexus/pull/285)
