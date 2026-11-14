@@ -3,8 +3,8 @@ FROM ubuntu:20.10
 MAINTAINER DESY, Jan Kotanski <jankotan@gmail.com>
 
 RUN apt-get -qq update && export DEBIAN_FRONTEND=noninteractive && apt-get -qq install -y software-properties-common curl
-RUN curl https://docs.desy.de/pni-hdri/debian_repo.pub.gpg | apt-key add -
-RUN add-apt-repository "deb https://docs.desy.de/pni-hdri/apt/debian groovy main" -y
+RUN curl https://repos.desy.de/pni-hdri/debian_repo.pub.gpg | apt-key add -
+RUN add-apt-repository "deb https://repos.desy.de/pni-hdri/apt/debian groovy main" -y
 RUN apt-get -qq update && export DEBIAN_FRONTEND=noninteractive && apt-get -qq -y dist-upgrade
 
 RUN /bin/bash -c 'echo "Europe/Berlin" > /etc/timezone'
