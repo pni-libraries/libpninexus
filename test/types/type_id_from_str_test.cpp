@@ -170,4 +170,29 @@ BOOST_AUTO_TEST_SUITE(type_id_from_str_test)
         BOOST_CHECK_EQUAL(type_id_from_str("none"),type_id_t::None);
     }
 
+    //========================================================================
+    BOOST_AUTO_TEST_CASE(test_nexus_type_names)
+    {
+        // NeXus type names as used by the NeXus Data Writer
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_UINT8"),type_id_t::UInt8);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_INT8"),type_id_t::Int8);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_UINT16"),type_id_t::UInt16);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_INT16"),type_id_t::Int16);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_UINT32"),type_id_t::UInt32);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_INT32"),type_id_t::Int32);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_UINT64"),type_id_t::UInt64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_INT64"),type_id_t::Int64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_UINT"),type_id_t::UInt64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_INT"),type_id_t::Int64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_POSINT"),type_id_t::UInt64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_FLOAT32"),type_id_t::Float32);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_FLOAT64"),type_id_t::Float64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_FLOAT"),type_id_t::Float64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_NUMBER"),type_id_t::Float64);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_CHAR"),type_id_t::String);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_DATE_TIME"),type_id_t::String);
+        BOOST_CHECK_EQUAL(type_id_from_str("ISO8601"),type_id_t::String);
+        BOOST_CHECK_EQUAL(type_id_from_str("NX_BOOLEAN"),type_id_t::EBool);
+    }
+
 BOOST_AUTO_TEST_SUITE_END()

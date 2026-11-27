@@ -3,6 +3,7 @@
 ## 3.X.Y - 2026-XX-YY
 - add ubuntu 26.10 tests (https://github.com/pni-libraries/libpninexus/pull/292)
 - change update the HDRI repository url (https://github.com/pni-libraries/libpninexus/pull/294)
+- fix NX_INT16 mapped to Int8, add NX_INT8, NX_POSINT, NX_NUMBER, NX_DATE_TIME and ISO8601 type names
 
 ## 3.6.0 - 2026-08-11
 - field attributes in xml builder changed to utf8 (https://github.com/pni-libraries/libpninexus/pull/283)
