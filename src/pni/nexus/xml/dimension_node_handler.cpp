@@ -33,13 +33,20 @@ bool operator<(const IndexValue &lhs,const IndexValue &rhs)
   return lhs.first<rhs.first;
 }
 
-hdf5::Dimensions DimensionNodeHandler::dimensions(const Node &node)
+hdf5::Dimensions::value_type DimensionNodeHandler::unknown_length()
+{
+  return H5S_UNLIMITED;
+}
+
+hdf5::Dimensions DimensionNodeHandler::dimensions(const Node &node,
+                                                  bool unknown_allowed)
 {
   size_t rank = ParserType()(node.attribute("rank").str_data());
   IndexValueVector index_values;
   for(auto value: node)
     if(value.first == "dim")
-      index_values.push_back(index_value_from_node(value.second));
+      index_values.push_back(index_value_from_node(value.second,
+                                                   unknown_allowed));
 
   if (rank > 0 && index_values.size() == 0){
     for(size_t rk = 0; rk != rank; rk++)
@@ -71,14 +78,29 @@ hdf5::Dimensions DimensionNodeHandler::dimensions(const Node &node)
 
 
 //------------------------------------------------------------------------
-IndexValue DimensionNodeHandler::index_value_from_node(const Node &dim_node)
+IndexValue DimensionNodeHandler::index_value_from_node(const Node &dim_node,
+                                                      bool unknown_allowed)
 {
   ParserType p;
   Node index_attribute = dim_node.attribute("index");
+  auto index = p(index_attribute.str_data());
+  if(unknown_allowed)
+  {
+    // the value can be missing or provided by a datasource
+    if(!dim_node.has_attribute("value"))
+      return {index, unknown_length()};
+    try
+    {
+      return {index, p(dim_node.attribute("value").str_data())};
+    }
+    catch(...)
+    {
+      return {index, unknown_length()};
+    }
+  }
   Node value_attribute = dim_node.attribute("value");
 
-  return {p(index_attribute.str_data()),
-          p(value_attribute.str_data())};
+  return {index, p(value_attribute.str_data())};
 }
 
 } // namespace xml

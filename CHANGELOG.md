@@ -5,6 +5,7 @@
 - change update the HDRI repository url (https://github.com/pni-libraries/libpninexus/pull/294)
 - fix NX_INT16 mapped to Int8, add NX_INT8, NX_POSINT, NX_NUMBER, NX_DATE_TIME and ISO8601 type names
 - name xml groups without names by their types, e.g. 'entry' for 'NXentry', as the NeXus Data Writer
+- create extendible xml fields for dimensions without numeric lengths, e.g. provided by datasources of the NeXus Data Writer
 
 ## 3.6.0 - 2026-08-11
 - field attributes in xml builder changed to utf8 (https://github.com/pni-libraries/libpninexus/pull/283)

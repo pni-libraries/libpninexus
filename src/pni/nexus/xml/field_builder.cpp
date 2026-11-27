@@ -34,9 +34,10 @@ namespace xml {
 
 hdf5::dataspace::Simple FieldBuilder::construct_dataspace() const
 {
-  hdf5::dataspace::Simple space = dataspace_builder_.build();
+  // dimensions without numeric lengths are extendible
+  hdf5::dataspace::Simple space = dataspace_builder_.build_extendible();
   hdf5::Dimensions current_dimensions = space.current_dimensions();
-  hdf5::Dimensions max_dimensions(current_dimensions);
+  hdf5::Dimensions max_dimensions = space.maximum_dimensions();
   max_dimensions.front() = H5S_UNLIMITED;
   space.dimensions(current_dimensions,max_dimensions);
   return space;

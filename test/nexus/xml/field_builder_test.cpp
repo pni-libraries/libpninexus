@@ -225,5 +225,71 @@ BOOST_AUTO_TEST_SUITE_END()
 
 
 
+struct UnknownDimensionsFixture
+{
+    hdf5::file::File file;
+    hdf5::node::Group root_group;
+
+    UnknownDimensionsFixture()
+    {
+      file = hdf5::file::create("field_builder_unknown_test.nxs",
+                                hdf5::file::AccessFlags::Truncate);
+      root_group = file.root();
+      // fields of the NeXus Data Writer with dimensions provided
+      // by datasources or without lengths
+      nexus::xml::Node n = nexus::xml::Node::from_string(
+          "<group name=\"entry\" type=\"NXentry\">"
+          "<field name=\"spectrum\" type=\"NX_FLOAT64\">"
+          "<dimensions rank=\"1\"><dim index=\"1\">"
+          "<datasource type=\"CLIENT\" name=\"size\"/></dim></dimensions>"
+          "<strategy mode=\"STEP\"/></field>"
+          "<field name=\"image\" type=\"NX_UINT16\">"
+          "<dimensions rank=\"2\">"
+          "<dim index=\"1\" value=\"$datasources.height\"/>"
+          "<dim index=\"2\" value=\"20\"/></dimensions></field>"
+          "<field name=\"known\" type=\"NX_INT32\">"
+          "<dimensions rank=\"2\">"
+          "<dim index=\"1\" value=\"4\"/>"
+          "<dim index=\"2\" value=\"5\"/></dimensions></field>"
+          "</group>");
+      nexus::xml::ObjectBuilder builder(n);
+      builder.build(root_group);
+    }
+};
+
+BOOST_FIXTURE_TEST_SUITE(TestUnknownDimensions,UnknownDimensionsFixture)
+
+BOOST_AUTO_TEST_CASE(test_unknown_lengths)
+{
+  hdf5::node::Dataset dataset = hdf5::node::get_node(root_group,
+                                                     "/entry/spectrum");
+  hdf5::dataspace::Simple space(dataset.dataspace());
+  BOOST_CHECK(space.current_dimensions() == hdf5::Dimensions({0}));
+  BOOST_CHECK(space.maximum_dimensions() ==
+              hdf5::Dimensions({H5S_UNLIMITED}));
+  BOOST_CHECK(dataset.creation_list().chunk() == hdf5::Dimensions({1}));
+
+  dataset = hdf5::node::get_node(root_group, "/entry/image");
+  space = hdf5::dataspace::Simple(dataset.dataspace());
+  BOOST_CHECK(space.current_dimensions() == hdf5::Dimensions({0, 20}));
+  BOOST_CHECK(space.maximum_dimensions() ==
+              hdf5::Dimensions({H5S_UNLIMITED, 20}));
+  BOOST_CHECK(dataset.creation_list().chunk() == hdf5::Dimensions({1, 20}));
+}
+
+BOOST_AUTO_TEST_CASE(test_known_lengths)
+{
+  // fields with known lengths are not changed
+  hdf5::node::Dataset dataset = hdf5::node::get_node(root_group,
+                                                     "/entry/known");
+  hdf5::dataspace::Simple space(dataset.dataspace());
+  BOOST_CHECK(space.current_dimensions() == hdf5::Dimensions({4, 5}));
+  BOOST_CHECK(space.maximum_dimensions() ==
+              hdf5::Dimensions({H5S_UNLIMITED, 5}));
+  BOOST_CHECK(dataset.creation_list().chunk() == hdf5::Dimensions({1, 5}));
+}
+
+BOOST_AUTO_TEST_SUITE_END()
+
 BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()

@@ -53,6 +53,35 @@ hdf5::dataspace::Simple DataspaceBuilder::build() const
 
 }
 
+hdf5::Dimensions DataspaceBuilder::extendible_dimensions() const
+{
+  hdf5::Dimensions dimensions{1};
+  auto has_dimension_node = node_.get_child_optional("dimensions");
+  if(has_dimension_node)
+  {
+    Node dimension_node = has_dimension_node.get();
+    dimensions = DimensionNodeHandler::dimensions(dimension_node, true);
+  }
+  return dimensions;
+}
+
+hdf5::dataspace::Simple DataspaceBuilder::build_extendible() const
+{
+  using hdf5::dataspace::Simple;
+
+  hdf5::Dimensions current_dimensions = extendible_dimensions();
+  hdf5::Dimensions max_dimensions(current_dimensions);
+  for(size_t index = 0; index != current_dimensions.size(); ++index)
+  {
+    if(current_dimensions[index] == DimensionNodeHandler::unknown_length())
+    {
+      current_dimensions[index] = 0;
+      max_dimensions[index] = H5S_UNLIMITED;
+    }
+  }
+  return Simple(current_dimensions, max_dimensions);
+}
+
 
 } // namespace xml
 } // namespace nexus
