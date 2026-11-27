@@ -40,7 +40,7 @@ static const std::string file_sep="://";
 Path::Element get_element(const std::string &estr)
 {
   using namespace pni;
-  boost::regex expr("^(?<GNAME>[A-Za-z0-9_-]+)?(:(?<GTYPE>[A-Za-z0-0_-]+))?$");
+  boost::regex expr("^(?<GNAME>[A-Za-z0-9_-]+)?(:(?<GTYPE>[A-Za-z0-9_-]+))?$");
 
   if(estr=="." || estr == "..")
     return {estr,string()};

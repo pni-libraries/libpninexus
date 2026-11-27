@@ -1,5 +1,6 @@
 set(SOURCES xml_test.cpp
 	        group_builder_test.cpp
+	        link_builder_test.cpp
 	        xml_base_fixture.cpp
 	        xml_test_common.cpp
 	        node_test.cpp
