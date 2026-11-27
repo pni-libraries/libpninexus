@@ -41,6 +41,16 @@ hdf5::node::Group group_from_node(const hdf5::node::Group &parent,
 
     //fetch the name for the group
     std::string name = group_node.name();
+    std::string type;
+    if(group_node.has_attribute("type"))
+      type = group_node.attribute("type").str_data();
+
+    if(name.empty() && type.size() > 2 && type != "NXroot")
+    {
+      //as the NeXus Data Writer, the name is given by the type without
+      //its NX prefix, e.g. 'entry' for 'NXentry'
+      name = type.substr(2);
+    }
 
     if((name.empty() || name == "/")  && parent.link().path().is_root())
         return parent;
