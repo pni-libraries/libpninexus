@@ -237,7 +237,7 @@ struct UnknownDimensionsFixture
       root_group = file.root();
       // fields of the NeXus Data Writer with dimensions provided
       // by datasources or without lengths
-      nexus::xml::Node n = nexus::xml::Node::from_string(
+      pni::nexus::xml::Node n = pni::nexus::xml::Node::from_string(
           "<group name=\"entry\" type=\"NXentry\">"
           "<field name=\"spectrum\" type=\"NX_FLOAT64\">"
           "<dimensions rank=\"1\"><dim index=\"1\">"
@@ -252,7 +252,7 @@ struct UnknownDimensionsFixture
           "<dim index=\"1\" value=\"4\"/>"
           "<dim index=\"2\" value=\"5\"/></dimensions></field>"
           "</group>");
-      nexus::xml::ObjectBuilder builder(n);
+      pni::nexus::xml::ObjectBuilder builder(n);
       builder.build(root_group);
     }
 };

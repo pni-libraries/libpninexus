@@ -25,6 +25,7 @@
 #include <h5cpp/hdf5.hpp>
 #include <pni/parsers.hpp>
 #include <pni/nexus/xml/node.hpp>
+#include <pni/windows.hpp>
 
 namespace pni {
 namespace nexus {
@@ -38,7 +39,7 @@ using IndexValueVector = std::vector<IndexValue>;
 
 bool operator<(const IndexValue &lhs,const IndexValue &rhs);
 
-class DimensionNodeHandler
+class PNINEXUS_EXPORT DimensionNodeHandler
 {
   private:
     static IndexValue index_value_from_node(const Node &node,
