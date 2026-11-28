@@ -429,5 +429,25 @@ BOOST_AUTO_TEST_CASE(test_from_string_with_file)
 
 }
 
+//-------------------------------------------------------------------------
+BOOST_AUTO_TEST_CASE(test_types_with_digits)
+{
+  // types can contain digits as names
+  Path p = Path::from_string("/entry_1:NXentry/detector_2:NXdetector2/:NXdata1");
+  BOOST_CHECK(p.size() == 4);
+  auto iter = p.begin();
+  ++iter;
+  BOOST_CHECK(iter->first == "entry_1");
+  BOOST_CHECK(iter->second == "NXentry");
+  ++iter;
+  BOOST_CHECK(iter->first == "detector_2");
+  BOOST_CHECK(iter->second == "NXdetector2");
+  ++iter;
+  BOOST_CHECK(iter->first.empty());
+  BOOST_CHECK(iter->second == "NXdata1");
+  BOOST_CHECK(Path::to_string(p) ==
+              "/entry_1:NXentry/detector_2:NXdetector2/:NXdata1");
+}
+
 BOOST_AUTO_TEST_SUITE_END()
 BOOST_AUTO_TEST_SUITE_END()

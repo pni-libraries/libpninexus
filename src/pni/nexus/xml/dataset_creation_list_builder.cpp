@@ -43,8 +43,11 @@ void DatasetCreationListBuilder::set_chunking(hdf5::property::DatasetCreationLis
 {
   dcpl.layout(hdf5::property::DatasetLayout::Chunked);
 
-  //set the default chunk layout
-  hdf5::Dimensions chunk = dataspace_builder_.build().current_dimensions();
+  //set the default chunk layout, unknown dimensions are chunked by 1
+  hdf5::Dimensions chunk = dataspace_builder_.extendible_dimensions();
+  for(auto &length: chunk)
+    if(length == DimensionNodeHandler::unknown_length() || length == 0)
+      length = 1;
   chunk.front() = 1;
 
   auto has_chunk_node = node_.get_child_optional("chunk");

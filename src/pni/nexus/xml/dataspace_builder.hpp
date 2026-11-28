@@ -41,6 +41,20 @@ class PNINEXUS_EXPORT DataspaceBuilder
     DataspaceBuilder(const Node &node);
 
     hdf5::dataspace::Simple build() const;
+
+    //!
+    //! \brief build an extendible dataspace
+    //!
+    //! Dimensions with unknown lengths, i.e. dim nodes without numeric
+    //! values, have the current size 0 and unlimited maximum sizes.
+    //! Other dimensions are as with build().
+    //!
+    hdf5::dataspace::Simple build_extendible() const;
+
+    //!
+    //! \brief dimension lengths with unknown lengths set to 0
+    //!
+    hdf5::Dimensions extendible_dimensions() const;
 };
 
 

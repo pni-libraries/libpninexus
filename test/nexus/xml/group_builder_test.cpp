@@ -102,6 +102,60 @@ BOOST_AUTO_TEST_CASE(recursive_definition_groups)
   BOOST_CHECK(nexus::IsData()(entry.nodes["data"]));
 }
 
+BOOST_AUTO_TEST_CASE(groups_named_by_types)
+{
+  // groups without names are named by their types as in the
+  // NeXus Data Writer, e.g. 'entry' for 'NXentry'
+  std::string xml_input =
+      "<group type=\"NXentry\">"
+      "<group type=\"NXinstrument\"><group type=\"NXdetector\"/></group>"
+      "<group name=\"data_1\" type=\"NXdata\"/>"
+      "</group>";
+
+  BOOST_CHECK_NO_THROW(xml_node = nexus::xml::Node::from_string(xml_input));
+  BOOST_CHECK_NO_THROW(builder = nexus::xml::ObjectBuilder(xml_node));
+  BOOST_CHECK_NO_THROW(builder.build(root_group));
+
+  BOOST_CHECK(root_group.nodes.size() == 1);
+  BOOST_CHECK(root_group.nodes.exists("entry"));
+  node::Group entry = root_group.nodes["entry"];
+  BOOST_CHECK(nexus::IsEntry()(entry));
+  BOOST_CHECK(entry.nodes.size() == 2);
+  BOOST_CHECK(entry.nodes.exists("instrument"));
+  BOOST_CHECK(entry.nodes.exists("data_1"));
+  node::Group instrument = entry.nodes["instrument"];
+  BOOST_CHECK(nexus::IsInstrument()(instrument));
+  BOOST_CHECK(instrument.nodes.exists("detector"));
+}
+
+BOOST_AUTO_TEST_CASE(nameless_root_groups)
+{
+  // groups without names and types or with the NXroot type at the root
+  // stand for the root group
+  std::string xml_input =
+      "<group type=\"NXroot\"><group name=\"entry_1\" type=\"NXentry\"/>"
+      "</group>"
+      "<group><group name=\"entry_2\" type=\"NXentry\"/></group>";
+
+  BOOST_CHECK_NO_THROW(xml_node = nexus::xml::Node::from_string(xml_input));
+  BOOST_CHECK_NO_THROW(builder = nexus::xml::ObjectBuilder(xml_node));
+  BOOST_CHECK_NO_THROW(builder.build(root_group));
+
+  BOOST_CHECK(root_group.nodes.size() == 2);
+  BOOST_CHECK(root_group.nodes.exists("entry_1"));
+  BOOST_CHECK(root_group.nodes.exists("entry_2"));
+}
+
+BOOST_AUTO_TEST_CASE(nameless_groups_without_types)
+{
+  std::string xml_input =
+      "<group name=\"entry\" type=\"NXentry\"><group/></group>";
+
+  BOOST_CHECK_NO_THROW(xml_node = nexus::xml::Node::from_string(xml_input));
+  BOOST_CHECK_NO_THROW(builder = nexus::xml::ObjectBuilder(xml_node));
+  BOOST_CHECK_THROW(builder.build(root_group), std::exception);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
 
 BOOST_AUTO_TEST_SUITE_END()

@@ -25,6 +25,7 @@
 #include <h5cpp/hdf5.hpp>
 #include <pni/parsers.hpp>
 #include <pni/nexus/xml/node.hpp>
+#include <pni/windows.hpp>
 
 namespace pni {
 namespace nexus {
@@ -38,12 +39,27 @@ using IndexValueVector = std::vector<IndexValue>;
 
 bool operator<(const IndexValue &lhs,const IndexValue &rhs);
 
-class DimensionNodeHandler
+class PNINEXUS_EXPORT DimensionNodeHandler
 {
   private:
-    static IndexValue index_value_from_node(const Node &node);
+    static IndexValue index_value_from_node(const Node &node,
+                                            bool unknown_allowed = false);
   public:
-    static hdf5::Dimensions dimensions(const Node &node);
+    //!
+    //! \brief dimension lengths of a dimensions node
+    //!
+    //! The lengths of dim nodes without values or with values which are not
+    //! numbers, e.g. values provided by datasources of the NeXus Data
+    //! Writer, are unknown if unknown_allowed is true. Unknown lengths are
+    //! set to unknown_length(). Otherwise such dim nodes raise exceptions.
+    //!
+    static hdf5::Dimensions dimensions(const Node &node,
+                                       bool unknown_allowed = false);
+
+    //!
+    //! \brief length of unknown dimensions
+    //!
+    static hdf5::Dimensions::value_type unknown_length();
 };
 
 
